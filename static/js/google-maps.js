@@ -7,6 +7,7 @@ function initialize() {
 
     var map = new google.maps.Map(document.getElementById("map_canvas"),
                                   myOptions);
+    var bounds = new google.maps.LatLngBounds();
 
     $.getJSON('/ajax/busstopped', function(data){
 		  // Shape over the icon we can click
@@ -38,13 +39,16 @@ function initialize() {
 				 {
 				     content: point['description']
 				 });
+			     bounds.extend(myLatLng);
 			     google.maps.event.addListener(marker, 'click', 
 							   function(event) {
 							       infowindow.open(map, marker);
 							   });
 			 });
 	      });
-    
+
+    map.fitBounds(bounds);
+
     // Add a point
     google.maps.event.addListener(map, 'click', 
 				  function(event) {

@@ -1,5 +1,5 @@
 import os
-import simplejson
+from django.utils import simplejson
 
 from google.appengine.ext.webapp import template
 
