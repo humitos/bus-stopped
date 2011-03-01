@@ -58,6 +58,8 @@ class AjaxGetBusStopped(webapp.RequestHandler):
             'description': '<b>' + bs.name + '</b>',
             })
         points = simplejson.dumps(points)
+
+        self.response.headers["Content-Type"] = 'application/json'
         self.response.out.write(points)
 
 

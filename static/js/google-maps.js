@@ -1,13 +1,16 @@
-function initialize() {
-    var myOptions = {
-        zoom: 13,
-        center: new google.maps.LatLng(-31.74121, -60.5125),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
+$(document).ready(function(){
+		      myOptions = {
+			  zoom: 13,
+			  center: new google.maps.LatLng(-31.74121, -60.5125),
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+		      };
+		      
+		      map = new google.maps.Map(document.getElementById("map_canvas"),
+						myOptions);
+		      bounds = new google.maps.LatLngBounds();
+		  });
 
-    var map = new google.maps.Map(document.getElementById("map_canvas"),
-                                  myOptions);
-    var bounds = new google.maps.LatLngBounds();
+function initialize() {
 
     $.getJSON('/ajax/busstopped', function(data){
 		  // Shape over the icon we can click
@@ -47,7 +50,7 @@ function initialize() {
 			 });
 	      });
 
-    map.fitBounds(bounds);
+    // map.fitBounds(bounds);
 
     // Add a point
     google.maps.event.addListener(map, 'click', 
@@ -57,3 +60,40 @@ function initialize() {
 				  });
 }
 
+function getDirection(){
+    var origin_lat = $("input[name='latitude']").val();
+    var origin_lng = $("input[name='longitude']").val();
+
+    var originLatLng = new google.maps.LatLng(origin_lat, origin_lng);
+    var destinationLatLng = new google.maps.LatLng(-31.72699803750814, -60.51389743088009);
+    var direction_service = new google.maps.DirectionsService();
+    direction_service.route({
+				destination: destinationLatLng,
+				origin: originLatLng,
+				provideRouteAlternatives: true,
+				travelMode: google.maps.DirectionsTravelMode.WALKING
+			    },
+			   function(direction_result, direction_status){
+			       var directions_renderer = new google.maps.DirectionsRenderer({
+												directions: direction_result,
+												map: map,
+												preserveViewport: true
+											  });
+			       
+			   });
+}
+
+function getBusStop(){
+    var origin_lat = $("input[name='latitude']").val();
+    var origin_lng = $("input[name='longitude']").val();
+    
+    var originLatLng = new google.maps.LatLng(origin_lat, origin_lng);
+    var geocoder = new google.maps.Geocoder({
+						bounds: bounds,
+						location: originLatLng
+					    },
+					   function(geocoder_result, geocoder_status){
+					       alert(geocoder_result);
+					       alert(geocoder_result['adress_components']);
+					   });
+}
