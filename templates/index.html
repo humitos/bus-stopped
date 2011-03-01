@@ -13,13 +13,25 @@
   <body onload="initialize()">
     <div id="map_canvas" style="width: 750px; height: 460px;margin-left:15px;"></div>
 
+    <br />
+    <div id="horarios" style="float: rigth">Horarios:</div>
+    <br />
+
     <form method="POST" action="/point/insert" name="insert-point-form">
       <laber for="user-location">Enter Your Location</label><input name="user-location" value="" /><br />
       <laber for="latitude">Latitude</label><input name="latitude" value="" /><br />
       <laber for="longitude">Longitude</label><input name="longitude" value="" /><br />
       <laber for="name">Name</label><input name="name" value="" /><br />
       <laber for="address">Address</label><input name="address" value="" /><br />
-      <input type="submit" value="Submit" name="submit" /><br />
+      <laber for="time">Time</label><input name="time" value="" /><br />
+      <laber for="days">Days</label>
+      <select name="days">
+	<option value="Habiles">Habiles</option>
+	<option value="Sabados">Sabados</option>
+	<option value="Domingos">Domingos</option>
+      </select><br />
+
+    <input type="submit" value="Submit" name="submit" /><br />
 
     <input onclick="javascript:getDirection()" name="go-button" value="Get Direction To 'B'" type="button" /><br />
     <input onclick="javascript:getMyLocation()" name="go-button" value="Get My Location!" type="button" /><br />
@@ -27,7 +39,12 @@
     </form>
 
     {% for bus_stop in bus_stops %}
-      <p><b>{{ bus_stop.name }}: </b>{{ bus_stop.point }}</p>
+      <p><b>{{ bus_stop.name }}: </b>{{ bus_stop }}</p>
+      <ul>
+      {% for bus_time in bus_stop.get_bus_times %}
+	<li>{{ bus_time }}</li>
+      {% endfor %}
+      </ul>
     {% endfor %}
 
     <img src="http://code.google.com/appengine/images/appengine-noborder-120x30.gif"

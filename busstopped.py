@@ -1,13 +1,15 @@
 import os
+import datetime
+
 from django.utils import simplejson
 
 from google.appengine.ext.webapp import template
 
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
+from google.appengine.ext import db
 
-from utils import buildmap
-from models import BusStop
+from models import BusStop, BusTime
 
 # from google.appengine.dist import use_library
 # use_library('django', '1.0')
@@ -16,21 +18,8 @@ class MainPage(webapp.RequestHandler):
     def get(self):
         bus_stops = BusStop.all()
 
-        points = []
-        for bs in bus_stops:
-          points.append({
-            'title': bs.name,
-            'address': bs.address,
-            'icon': 'info',
-            'latitude': bs.point.lat,
-            'longitude': bs.point.lon,
-            'description': 'Here are a description example',
-            })
-        gmap = buildmap(points)
-
         template_values = {
           'bus_stops': bus_stops,
-          'gmap': gmap
           }
 
         path = os.path.join(os.path.dirname(__file__), 'templates', 'index.html')
@@ -44,6 +33,7 @@ class AjaxGetBusStopped(webapp.RequestHandler):
         for bs in bus_stops:
             points.append({
                 'title': bs.name,
+                'key': str(bs.key()),
                 'address': bs.address,
                 'icon': '/static/img/gmarkers/info.png',
                 'shadow': '/static/img/gmarkers/shadow.png',
@@ -55,6 +45,23 @@ class AjaxGetBusStopped(webapp.RequestHandler):
 
         self.response.headers["Content-Type"] = 'application/json'
         self.response.out.write(points)
+
+class AjaxGetBusStopTimes(webapp.RequestHandler):
+    def get(self):
+        bs = db.get(self.request.get('busstop_key'))
+        bus_times = bs.get_bus_times()
+
+        times = []
+        for bt in bus_times:
+          times.append({
+              'bus_stop': str(bt.bus_stop.key()),
+              'days': bt.days,
+              'time': bt.time.strftime('%H:%M'),
+              })
+        times = simplejson.dumps(times)
+
+        self.response.headers["Content-Type"] = 'application/json'
+        self.response.out.write(times)
 
 
 class MapPage(webapp.RequestHandler):
@@ -84,6 +91,14 @@ class InsertPointPage(webapp.RequestHandler):
                            address=self.request.get('address'))
         bus_stop.put()
 
+        time = self.request.get('time')
+        time = datetime.time(*map(int, time.split(':')))
+
+        bus_time = BusTime(bus_stop=bus_stop.key(),
+                           days=self.request.get('days'),
+                           time=time)
+        bus_time.put()
+
         self.redirect('/')
 
 application = webapp.WSGIApplication(
@@ -92,6 +107,7 @@ application = webapp.WSGIApplication(
         ('/map', MapPage),
         ('/point/insert', InsertPointPage),
         ('/ajax/busstopped', AjaxGetBusStopped),
+        ('/ajax/point', AjaxGetBusStopTimes),
     ],
      debug=True)
 

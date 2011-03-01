@@ -10,7 +10,6 @@ $(document).ready(function(){
 		      map = new google.maps.Map(document.getElementById("map_canvas"),
 						myOptions);
 		      bounds = new google.maps.LatLngBounds();
-		      alert(initialLocation);
 		  });
 
 function initialize() {
@@ -37,7 +36,8 @@ function initialize() {
 				     icon: point['icon'],
 				     shape: shape,
 				     title: point['title'],
-				     zIndex: 1
+				     zIndex: 1,
+				     key: point['key']
 				 });
 			     
 			     // FIXME: those event's don't work propertly
@@ -49,6 +49,17 @@ function initialize() {
 			     google.maps.event.addListener(marker, 'click', 
 							   function(event) {
 							       infowindow.open(map, marker);
+							       $("input[name='latitude']").attr('value', marker.position.lat());
+							       $("input[name='longitude']").attr('value', marker.position.lng());
+							       $("input[name='name']").attr('value', marker.title);
+							       
+							       $.getJSON('/ajax/point?busstop_key=' + marker.key, function(data){
+									     $.each(data, function(i, bus_time){
+											$('#horarios').append('<span>' + bus_time['time'] + '</span><br />');
+											$('#horarios').append('<span>' + bus_time['days'] + '</span><br />');
+										    });
+									 });
+
 							   });
 			 });
 	      });
@@ -89,6 +100,7 @@ function getDirection(){
 function getMyLocation(){
     var geocoder = new google.maps.Geocoder();
     var address = $("input[name='user-location']").val();
+    var original_address = address;
     address += ' Parana, Entre Rios';
     
     geocoder.geocode({
@@ -104,7 +116,7 @@ function getMyLocation(){
 					    map: map,
 					    shadow: '/static/img/gmarkers/shadow.png',
 					    icon: '/static/img/gmarkers/building.png',
-					    title: 'Busqueda',
+					    title: original_address,
 					    zIndex: 1
 					});
 				    map.setCenter(result['geometry'].location);
