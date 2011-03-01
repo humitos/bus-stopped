@@ -5,18 +5,12 @@ from google.appengine.ext.webapp import template
 
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
-from google.appengine.ext import db
 
 from utils import buildmap
+from models import BusStop
 
 # from google.appengine.dist import use_library
 # use_library('django', '1.0')
-
-class BusStop(db.Model):
-  name = db.StringProperty()
-  point = db.GeoPtProperty()
-  address = db.StringProperty()
-
 
 class MainPage(webapp.RequestHandler):
     def get(self):
@@ -48,15 +42,15 @@ class AjaxGetBusStopped(webapp.RequestHandler):
 
         points = []
         for bs in bus_stops:
-          points.append({
-            'title': bs.name,
-            'address': bs.address,
-            'icon': '/static/img/gmarkers/info.png',
-            'shadow': '/static/img/gmarkers/shadow.png',
-            'latitude': bs.point.lat,
-            'longitude': bs.point.lon,
-            'description': '<b>' + bs.name + '</b>',
-            })
+            points.append({
+                'title': bs.name,
+                'address': bs.address,
+                'icon': '/static/img/gmarkers/info.png',
+                'shadow': '/static/img/gmarkers/shadow.png',
+                'latitude': bs.point.lat,
+                'longitude': bs.point.lon,
+                'description': '<b>' + bs.name + '</b>',
+                })
         points = simplejson.dumps(points)
 
         self.response.headers["Content-Type"] = 'application/json'
@@ -83,11 +77,11 @@ class InsertPointPage(webapp.RequestHandler):
         self.response.out.write(template.render(path, template_values))
 
     def post(self):
-        bus_stop = BusStop()
-        bus_stop.point = '%s,%s' % (self.request.get('latitude'), self.request.get('longitude'))
-        bus_stop.name = self.request.get('name')
-        bus_stop.address = self.request.get('address')
+        point = '%s,%s' % (self.request.get('latitude'), self.request.get('longitude'))
 
+        bus_stop = BusStop(point=point,
+                           name=self.request.get('name'),
+                           address=self.request.get('address'))
         bus_stop.put()
 
         self.redirect('/')

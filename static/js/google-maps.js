@@ -1,13 +1,16 @@
 $(document).ready(function(){
+			  // center: new google.maps.LatLng(-31.74121, -60.5125),
+
 		      myOptions = {
 			  zoom: 13,
-			  center: new google.maps.LatLng(-31.74121, -60.5125),
+			  center: initialLocation,
 			  mapTypeId: google.maps.MapTypeId.ROADMAP
 		      };
 		      
 		      map = new google.maps.Map(document.getElementById("map_canvas"),
 						myOptions);
 		      bounds = new google.maps.LatLngBounds();
+		      alert(initialLocation);
 		  });
 
 function initialize() {
@@ -83,7 +86,7 @@ function getDirection(){
 			   });
 }
 
-function getBusStop(){
+function getMyLocation(){
     var geocoder = new google.maps.Geocoder();
     var address = $("input[name='user-location']").val();
     address += ' Parana, Entre Rios';
@@ -104,6 +107,52 @@ function getBusStop(){
 					    title: 'Busqueda',
 					    zIndex: 1
 					});
+				    map.setCenter(result['geometry'].location);
 				});
 		     });
+}
+
+var near_busstop = 0;
+function getNearBusStop(){
+    var lat = $("input[name='latitude']").val();
+    var lng = $("input[name='longitude']").val();
+    var origin = new google.maps.LatLng(lat, lng);
+
+    var ds = new google.maps.DirectionsService();
+    var minor_distance = 50000;
+
+    $.getJSON('/ajax/busstopped', 
+	      function(data){
+		  $.each(data, 
+			 function(i, item){
+			     var destination = new google.maps.LatLng(item['latitude'], item['longitude']);
+			     ds.route({
+					  destination: destination,
+					  origin: origin,
+					  travelMode: google.maps.DirectionsTravelMode.WALKING,
+					  provideRouteAlternatives: false
+				      },
+				      function(result, status){
+					  alert('insite ' + this.near_busstop);
+					  var distance = result.routes[0].legs[0].distance.value;
+					  if(distance < minor_distance){
+					      minor_distance = distance;
+					      near_busstop = item;
+					  }
+				      });
+			 });
+		  
+		  var location = new google.maps.LatLng(near_busstop['latitude'], near_busstop['longitude']);
+		  var marker = new google.maps.Marker(
+		      {
+			  clickable: true,
+			  position: location,
+			  map: map,
+			  shadow: '/static/img/gmarkers/shadow.png',
+			  icon: '/static/img/gmarkers/building.png',
+			  title: 'Near Bus Stop',
+			  zIndex: 2
+		      });
+		  
+	      });
 }
