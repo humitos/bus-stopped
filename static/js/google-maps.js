@@ -84,16 +84,26 @@ function getDirection(){
 }
 
 function getBusStop(){
-    var origin_lat = $("input[name='latitude']").val();
-    var origin_lng = $("input[name='longitude']").val();
+    var geocoder = new google.maps.Geocoder();
+    var address = $("input[name='user-location']").val();
+    address += ' Parana, Entre Rios';
     
-    var originLatLng = new google.maps.LatLng(origin_lat, origin_lng);
-    var geocoder = new google.maps.Geocoder({
-						bounds: bounds,
-						location: originLatLng
-					    },
-					   function(geocoder_result, geocoder_status){
-					       alert(geocoder_result);
-					       alert(geocoder_result['adress_components']);
-					   });
+    geocoder.geocode({
+			 address: address,
+			 bounds: bounds
+		     },
+		     function(geocoder_result, geocoder_status){
+			 $.each(geocoder_result, function(i, result){
+				    var marker = new google.maps.Marker(
+					{
+					    clickable: true,
+					    position: result['geometry'].location,
+					    map: map,
+					    shadow: '/static/img/gmarkers/shadow.png',
+					    icon: '/static/img/gmarkers/building.png',
+					    title: 'Busqueda',
+					    zIndex: 1
+					});
+				});
+		     });
 }
