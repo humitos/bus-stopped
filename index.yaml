@@ -14,4 +14,9 @@ indexes:
   properties:
   - name: bus_stop
   - name: time
+
+- kind: BusTime
+  properties:
+  - name: bus_stop
+  - name: time
     direction: desc

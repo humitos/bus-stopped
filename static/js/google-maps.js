@@ -54,6 +54,7 @@ function initialize() {
 							       $("input[name='name']").attr('value', marker.title);
 							       
 							       $.getJSON('/ajax/point?busstop_key=' + marker.key, function(data){
+									     $('#horarios').html('');
 									     $.each(data, function(i, bus_time){
 											$('#horarios').append('<span>' + bus_time['time'] + '</span><br />');
 											$('#horarios').append('<span>' + bus_time['days'] + '</span><br />');

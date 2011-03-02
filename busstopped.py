@@ -49,7 +49,7 @@ class AjaxGetBusStopped(webapp.RequestHandler):
 class AjaxGetBusStopTimes(webapp.RequestHandler):
     def get(self):
         bs = db.get(self.request.get('busstop_key'))
-        bus_times = bs.get_bus_times()
+        bus_times = bs.get_next_bus_times(25)
 
         times = []
         for bt in bus_times:
