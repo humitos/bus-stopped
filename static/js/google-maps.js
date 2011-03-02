@@ -1,6 +1,6 @@
 $(document).ready(function(){
-			  // center: new google.maps.LatLng(-31.74121, -60.5125),
-
+		      // center: new google.maps.LatLng(-31.74121, -60.5125),
+		      initialLocation = new google.maps.LatLng(-31.74141804574782, -60.51123228454588);
 		      myOptions = {
 			  zoom: 13,
 			  center: initialLocation,

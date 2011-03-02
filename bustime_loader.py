@@ -10,22 +10,29 @@ os.path.realpath(__file__))))
 # We HAVE TO import this model so appcfg.py could recognize it
 from models import *
 
+import datetime
+
 from google.appengine.tools import bulkloader
 
+def get_time(d):
+    return datetime.datetime.strptime(d, '%H:%M:%S').time()
 
-class BusStopLoader(bulkloader.Loader):
+def handle_entity(i):
+    bs_key = db.Key.from_path('BusStop', i)
+    bus_stop = db.get(bs_key)
+    return bus_stop
+
+
+class BusTimeLoader(bulkloader.Loader):
     def __init__(self):
-        bulkloader.Loader.__init__(self, 'BusStop',
-                                   [('name', str),
-                                    ('point', str),
-                                    ('address', str),
-                                    ('bus_line', int)
+        bulkloader.Loader.__init__(self, 'BusTime',
+                                   [('bus_stop', handle_entity),
+                                    ('days', str),
+                                    ('time', get_time),
                                     ])
 
-    def generate_key(self, i, values):
-        return values[0]
 
-loaders = [BusStopLoader]
+loaders = [BusTimeLoader]
 
 # import datetime
 # lambda x: datetime.datetime.strptime(x, '%m/%d/%Y').date()),
