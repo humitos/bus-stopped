@@ -1,4 +1,5 @@
 import os
+import settings
 import datetime
 
 from django.utils import simplejson
@@ -49,7 +50,7 @@ class AjaxGetBusStopped(webapp.RequestHandler):
 class AjaxGetBusStopTimes(webapp.RequestHandler):
     def get(self):
         bs = db.get(self.request.get('busstop_key'))
-        bus_times = bs.get_next_bus_times(25)
+        bus_times = bs.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES)
 
         times = []
         for bt in bus_times:
