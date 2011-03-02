@@ -40,25 +40,23 @@ function initialize() {
 				     key: point['key']
 				 });
 			     
-			     // FIXME: those event's don't work propertly
-			     var infowindow = new google.maps.InfoWindow(
-				 {
-				     content: point['description']
-				 });
 			     bounds.extend(myLatLng);
 			     google.maps.event.addListener(marker, 'click', 
 							   function(event) {
-							       infowindow.open(map, marker);
 							       $("input[name='latitude']").attr('value', marker.position.lat());
 							       $("input[name='longitude']").attr('value', marker.position.lng());
 							       $("input[name='name']").attr('value', marker.title);
 							       
 							       $.getJSON('/ajax/point?busstop_key=' + marker.key, function(data){
-									     $('#horarios').html('');
+									     var content = '<b>' + marker.title + '</b>';
 									     $.each(data, function(i, bus_time){
-											$('#horarios').append('<span>' + bus_time['time'] + '</span><br />');
-											$('#horarios').append('<span>' + bus_time['days'] + '</span><br />');
+											content += '<br /><span>' + bus_time['time'] + '</span>';
 										    });
+									     var infowindow = new google.maps.InfoWindow(
+										 {
+										     content: content
+										 });
+									     infowindow.open(map, marker);
 									 });
 
 							   });
