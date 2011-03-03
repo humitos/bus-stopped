@@ -1,4 +1,1 @@
-body {
-  font-family: Verdana, Helvetica, sans-serif;
-  background-color: #DDDDDD;
-}
+div#content ul.faq li {list-style: none;}

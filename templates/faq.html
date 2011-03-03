@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="content">
+  <h2>FAQ: Preguntas Frecuentes</h2>
+  <ul class="faq">
+    <li>
+      <h3>¿Qué es "Bus Stopped"?</h3>
+      <p>Básicamente es un sitio en el que aparecen las Paradas de Colectivo de "todas" (no aún) las líneas <em>Urbanas</em> de Paraná
+         ubicadas en un mapa y con referencias sobre sus horarios para cada una de las paradas listadas.</p>
+    </li>
+    <li>
+      <h3>¿Porqué no aparecen todas las paradas?</h3>
+      <p>Esta es la primera versión del sitio, y realmente lo hice en muy pocos días por lo que todavía el sitio está en desarrollo.
+         En lo posible lo iré actualizando lo más rápido que pueda, agregando nuevas características y mejorando las existentes.</p>
+    </li>
+    <li>
+      <h3>¿Cómo se calculan los tiempos?</h3>
+      <p>Los datos de los horarios en los que pasan los colectivos por las paradas están sacados de la página oficial de
+         <a href="http://www.lavictoriasrl.com.ar/">La Victoria S.R.L.</a> y son aproximados. Si bien la empresa cumple bastante con sus horarios,
+         éstos no son exactos.</p>
+    </li>
+    <li>
+      <h3>Los colectivos tienen GPS ¿Porqué no se toman los datos desde ahí?</h3>
+      <p>Actualmente no tengo acceso a la información que brindan los GPS de los colectos, estaría muy bueno poder obtener esa información y así
+         brinda un servicio mucho más preciso. Estoy "hablando" con la Municipalidad de Paraná para intentar llegar a un acuerdo y así poder obtener
+         estos datos.</p>
+    </li>
+    <li>
+      <h3>Me gusta el proyecto ¿Cómo puedo colaborar?</h3>
+      <p>Sinceramente, esto recién empieza y estoy aprendiendo las tecnologías que estoy usando. Lo que más me interesa es poder conseguir la
+         información de la mayor cantidad de líneas posibles o bien, directamente la información que envían los GPS de los colectivos.</p>
+      <p>También estaría bueno que se sume gente que tenga ganas de programar y que proponga nuevas ideas, cargue los datos, haga la parte de diseño
+         gráfico del sitio o cualquier otra cosa que se te ocurra.</p>
+    </li>
+    <li>
+      <h3>¿Qué tecnologías usa el sitio?</h3>
+      <p>El sitio está hecho con <a href="http://code.google.com/appengine/">Google App Engine</a> y su framework integrado "webapp" utilizando la <a href="http://code.google.com/intl/es/apis/maps/documentation/javascript/">API V3 de Google Maps</a>. El Layout y CSS del sitio lo descargue de <a href="http://www.free-css.com/">Free CSS</a> (<a href="http://www.free-css.com/assets/files/free-css-layouts/download/page1/layout3.zip">.zip</a>)</p>
+    </li>
+    <li>
+      <h3>¿A dónde apunta el proyecto?</h3>
+      <p>En este momento estoy trabajando para poder marcar los recorridos de los colectivos y sus horarios en ambos sentidos (Ida y Vuelta).
+         Después de esto vendrá la integración (o soporte) con Android e iPhone utilizando GeoLocalización.</p>
+      <p>Además, se podrá indicar a qué lugar vas y a dónde estás (si es que no estás con un dispositivo que soporte GeoLocalización) para que automáticamente te informe
+         cuál es la parada de colectivos más cercana y en cuánto tiempo pasa el próximo colectivo.</p>
+      <p>También tengo pensado migrarlo a <a href="http://www.tipfy.org/">Tipfy</a> ya que después de programar durante "muy poco" tiempo con <em>webapp</em> lo noté bastante engorroso.
+    </li>
+  </ul>
+</div>
+{% endblock %}

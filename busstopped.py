@@ -109,10 +109,30 @@ class InsertPointPage(webapp.RequestHandler):
 
         self.redirect('/')
 
+
+class FAQPage(webapp.RequestHandler):
+    def get(self):
+        template_values = {
+            }
+
+        path = os.path.join(os.path.dirname(__file__), 'templates', 'faq.html')
+        self.response.out.write(template.render(path, template_values))
+
+
+class ChangeLogPage(webapp.RequestHandler):
+    def get(self):
+        template_values = {
+            }
+
+        path = os.path.join(os.path.dirname(__file__), 'templates', 'change_log.html')
+        self.response.out.write(template.render(path, template_values))
+
+
 application = webapp.WSGIApplication(
     [
         ('/', MainPage),
-        ('/map', MapPage),
+        ('/faq', FAQPage),
+        ('/changelog', ChangeLogPage),
         ('/point/insert', InsertPointPage),
         ('/ajax/busstopped', AjaxGetBusStopped),
         ('/ajax/point', AjaxGetBusStopTimes),
