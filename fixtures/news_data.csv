@@ -1,3 +1,5 @@
 "Date","Title","Text"
 02/03/11,"Estamos en alpha! ","<p>Esta es la primera publicación de este sitio. Actualmente no están cargadas todas las paradas de colectivo ni todos sus horarios; únicamente la Línea 6 y las paradas de IDA de su recorrido.</p> <p>Haciendo click sobre cada uno de los íconos de información se muestran los colectivos que pasan por ese lugar en los próximos 30 minutos.</p> <p><em>**Mandame un mail con sugerencias, errores y comentarios!</em></p>"
 03/03/11,"Recorridos!","<p>Agregué una funcionalidad para poder mostrar los recorridos de los colectivos en sus dos direcciones: Ida y Vuelta</p>"
+03/03/11,"TipFy","<p>Migré el sitio entero del Framework de Google (webapp) a <a href=""http://www.tipfy.org"">TipFy</a>. La verdad que queda mucho más legible el código :)</p>"
+03/03/11,"GitHub","<p>Publiqué el código en <a href=""https://github.com/humitos/bus-stopped"">GitHub</a></p>"

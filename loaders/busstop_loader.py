@@ -3,12 +3,11 @@
 # directory to the path explicitly.
 import sys
 import os.path
-sys.path.append(
-os.path.abspath(
-os.path.dirname(
-os.path.realpath(__file__))))
+dirpath = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
+sys.path.append(os.path.join(os.path.dirname(dirpath)))
+
 # We HAVE TO import this model so appcfg.py could recognize it
-from models import *
+from apps.busstopped.models import *
 
 from google.appengine.tools import bulkloader
 
