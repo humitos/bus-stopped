@@ -50,18 +50,17 @@ env.filters['slugify'] = filter_slugify
 
 def request_context(context):
     context.update({
-            'news': News.all(),
+            'news': News.all().order('-date'),
             })
     return context
 
 
 class MainPage(RequestHandler, Jinja2Mixin):
     def get(self, **kwargs):
-        news = News.all()
-
         context = {
-          'news': news,
           }
+
+        context = request_context(context)
 
         return render_response('index.html', **context)
 
@@ -86,7 +85,7 @@ class AjaxGetBusStopped(RequestHandler):
 class AjaxGetBusStopTimes(RequestHandler):
     def get(self, **kwargs):
         bs = db.get(self.request.values.get('busstop_key'))
-        bus_times = bs.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES, direction='Vuelta')
+        bus_times = bs.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES, direction='Ida')
 
         times = []
         for bt in bus_times:
@@ -121,6 +120,7 @@ class ChangeLogPage(RequestHandler):
 class NewsPage(RequestHandler):
     def get(self, **kwargs):
         news = News.all()
+        news = news.order('-date')
         context = {
             'news': news,
             }
