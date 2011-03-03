@@ -19,7 +19,6 @@ class BusStopLoader(bulkloader.Loader):
                                    [('name', str),
                                     ('point', str),
                                     ('address', str),
-                                    ('bus_line', int)
                                     ])
 
     def generate_key(self, i, values):

@@ -17,7 +17,7 @@ from google.appengine.tools import bulkloader
 def get_time(d):
     return datetime.datetime.strptime(d, '%H:%M:%S').time()
 
-def handle_entity(i):
+def bus_stop_key(i):
     bs_key = db.Key.from_path('BusStop', i)
     bus_stop = db.get(bs_key)
     return bus_stop
@@ -26,9 +26,12 @@ def handle_entity(i):
 class BusTimeLoader(bulkloader.Loader):
     def __init__(self):
         bulkloader.Loader.__init__(self, 'BusTime',
-                                   [('bus_stop', handle_entity),
+                                   [('bus_stop', bus_stop_key),
+                                    ('bus_line', str),
                                     ('days', str),
                                     ('time', get_time),
+                                    ('comment', str),
+                                    ('direction', str),
                                     ])
 
 

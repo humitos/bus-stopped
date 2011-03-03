@@ -32,12 +32,12 @@ function initialize() {
 				     clickable: true,
 				     position: myLatLng,
 				     map: map,
-				     shadow: point['shadow'],
-				     icon: point['icon'],
+				     shadow: point.shadow,
+				     icon: point.icon,
 				     shape: shape,
-				     title: point['title'],
+				     title: point.title,
 				     zIndex: 1,
-				     key: point['key']
+				     key: point.key
 				 });
 			     
 			     bounds.extend(myLatLng);
@@ -50,7 +50,7 @@ function initialize() {
 							       $.getJSON('/ajax/point?busstop_key=' + marker.key, function(data){
 									     var content = '<b>' + marker.title + '</b>';
 									     $.each(data, function(i, bus_time){
-											content += '<br /><span>' + bus_time['time'] + '</span>';
+											content += '<br /><b>' + bus_time.time_left  + ' min:</b> ' + bus_time.direction  + ' <span>' + bus_time.time + '</span>';
 										    });
 									     var infowindow = new google.maps.InfoWindow(
 										 {

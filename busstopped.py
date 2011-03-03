@@ -12,6 +12,11 @@ from google.appengine.ext import db
 
 from models import BusStop, BusTime
 
+import sys
+sys.path.insert(0,
+                os.path.join(os.path.dirname(__file__), 'lib'))
+from dateutil.relativedelta import relativedelta
+
 # from google.appengine.dist import use_library
 # use_library('django', '1.0')
 
@@ -50,7 +55,7 @@ class AjaxGetBusStopped(webapp.RequestHandler):
 class AjaxGetBusStopTimes(webapp.RequestHandler):
     def get(self):
         bs = db.get(self.request.get('busstop_key'))
-        bus_times = bs.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES)
+        bus_times = bs.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES, direction='Vuelta')
 
         times = []
         for bt in bus_times:
@@ -58,6 +63,8 @@ class AjaxGetBusStopTimes(webapp.RequestHandler):
               'bus_stop': str(bt.bus_stop.key()),
               'days': bt.days,
               'time': bt.time.strftime('%H:%M'),
+              'direction': bt.direction,
+              'time_left': relativedelta(bt.time_1970(), BusStop.now_time()).minutes,
               })
         times = simplejson.dumps(times)
 
