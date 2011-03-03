@@ -26,7 +26,7 @@
 	<h2>Noticias</h2>
 	{% for n in news %}
 	<p><a href="/news#{{ n.title|slugify }}">{{ n.date|date("%d/%m/%y") }}: <strong>{{ n.title }}</strong></a></p>
-	<p>{{ n.text|truncatewords_html(25) }}</p>
+	{{ n.text|truncatewords_html(25) }}
 	{% endfor %}
       </div>
       <div id="footer">
