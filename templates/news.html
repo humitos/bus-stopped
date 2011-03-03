@@ -6,7 +6,7 @@
   <ul class="news">
     <li>
     {% for n in news %}
-    <p><a name="#{{ n.title|slugify }}" href="/news#{{ n.title|slugify }}">{{ n.date|date:"d/m/y" }}: <strong>{{ n.title }}</strong></a></p>
+    <p><a name="#{{ n.title|urlize }}" href="/news#{{ n.title|urlize }}">{{ n.date }}: <strong>{{ n.title }}</strong></a></p>
     <p>{{ n.text }}</p>
     {% endfor %}
     </li>
