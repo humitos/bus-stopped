@@ -3,8 +3,8 @@
   <head>
     <title>{% block title %}Bus Stopped | Encontra tu parada!{% endblock %}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
 
     {% block extra_head %}{% endblock %}
 
@@ -24,8 +24,8 @@
       </div>
       <div id="extra">
 	<h2>Noticias</h2>
-	<p>Miércoles 02/03/2011<br />
-	  Estamos en <strong>alpha</strong>!
+	<p>Miércoles 02/03/2011</p>
+	  <p>Estamos en <strong>alpha</strong>!
 	  <p>Esta es la primera publicación de este sitio. Actualmente
 	  no están cargadas todas las paaradas de colectivo ni todos
 	  sus horarios; únicamente la <em>Línea 6</em> y las paradas
@@ -38,6 +38,14 @@
       </div>
       <div id="footer">
 	{% include "footer.html" %}
+      </div>
+      <div id="w3c-icons">
+          <a href="http://validator.w3.org/check?uri=referer">
+            <img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" style="border:0;" height="31" width="88">
+          </a>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" />
+          </a>
       </div>
     </div>
   </body>
