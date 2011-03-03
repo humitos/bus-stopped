@@ -21,7 +21,7 @@ function initialize() {
 		  //     type: 'rectangle'
 		  // };
 		  var shape = {
-		      coord: [10, 15, 10],
+		      coord: [16, 16, 16],
 		      type: 'circle'
 		  };
 		  
