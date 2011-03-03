@@ -170,7 +170,12 @@ function KmlLayer(){
     var line = $('select[name=line] option:selected').val();
     var direction = $('select[name=direction] option:selected').val();
     // This .kml MUST be in public domain
-    var url = 'http://humitos.homelinux.net:8007/static/kml/' + direction + '_linea_' + line + '.kmz';
+    var url = window.location.href;
+    // FIXME: Just for DEBUG
+    if(url.indexOf('localhost') >= 0){
+	url = 'http://humitos.homelinux.net:8007/';
+    }
+    url += 'static/kml/' + direction + '_linea_' + line + '.kmz';
     var kml_layer = new google.maps.KmlLayer(url,
                                              {preserveViewport: true, suppressInfoWindows:true});
     kml_layer.setMap(map);

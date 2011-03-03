@@ -10,7 +10,7 @@ from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext import db
 
-from models import BusStop, BusTime
+from models import BusStop, BusTime, News
 
 import sys
 sys.path.insert(0,
@@ -22,10 +22,10 @@ from dateutil.relativedelta import relativedelta
 
 class MainPage(webapp.RequestHandler):
     def get(self):
-        bus_stops = BusStop.all()
+        news = News.all()
 
         template_values = {
-          'bus_stops': bus_stops,
+          'news': news,
           }
 
         path = os.path.join(os.path.dirname(__file__), 'templates', 'index.html')
@@ -128,10 +128,21 @@ class ChangeLogPage(webapp.RequestHandler):
         self.response.out.write(template.render(path, template_values))
 
 
+class NewsPage(webapp.RequestHandler):
+    def get(self):
+        news = News.all()
+        template_values = {
+            'news': news,
+            }
+
+        path = os.path.join(os.path.dirname(__file__), 'templates', 'news.html')
+        self.response.out.write(template.render(path, template_values))
+
 application = webapp.WSGIApplication(
     [
         ('/', MainPage),
         ('/faq', FAQPage),
+        ('/news', NewsPage),
         ('/changelog', ChangeLogPage),
         ('/point/insert', InsertPointPage),
         ('/ajax/busstopped', AjaxGetBusStopped),

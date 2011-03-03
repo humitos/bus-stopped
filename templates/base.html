@@ -24,17 +24,10 @@
       </div>
       <div id="extra">
 	<h2>Noticias</h2>
-	<p>Miércoles 02/03/2011</p>
-	  <p>Estamos en <strong>alpha</strong>!
-	  <p>Esta es la primera publicación de este sitio. Actualmente
-	  no están cargadas todas las paaradas de colectivo ni todos
-	  sus horarios; únicamente la <em>Línea 6</em> y las paradas
-	  de <em>IDA</em> de su recorrido.</p>
-	  <p>Haciendo click sobre cada uno de los íconos de
-	  información se muestran los colectivos que pasan por ese
-	  lugar en los próximos 30 minutos.<p>
-	</p>
-	<p><em>**Mandame un mail con sugerencias, errores y comentarios!</em></p>
+	{% for n in news %}
+	<p><a href="/news#{{ n.title|slugify }}">{{ n.date|date:"d/m/y" }}: <strong>{{ n.title }}</strong></a></p>
+	<p>{{ n.text|truncatewords_html:"25" }}</p>
+	{% endfor %}
       </div>
       <div id="footer">
 	{% include "footer.html" %}

@@ -71,3 +71,13 @@ class BusRoute(db.Model):
 
     def __repr__(self):
         return '%s - %s' % (self.direction, self.bus_line)
+
+
+class News(db.Model):
+    date = db.DateProperty(required=True)
+    text = db.TextProperty(required=True)
+    title = db.StringProperty(required=True)
+
+
+    def __repr__(self):
+        return '(%s) %s' % (self.date, self.title)
