@@ -1,6 +1,7 @@
 $(document).ready(function(){
                       // center: new google.maps.LatLng(-31.74121, -60.5125),
-                      initialLocation = new google.maps.LatLng(-31.74141804574782, -60.51123228454588);
+                      // initialLocation = new google.maps.LatLng(-31.74141804574782, -60.51123228454588);
+		      initialLocation = new google.maps.LatLng(INITIAL_LOCATION['latitude'], INITIAL_LOCATION['longitude']);
                       myOptions = {
                           zoom: 13,
                           center: initialLocation,
@@ -122,8 +123,8 @@ function getMyLocation(){
                                             clickable: true,
                                             position: result['geometry'].location,
                                             map: map,
-                                            shadow: '/static/img/gmarkers/shadow.png',
-                                            icon: '/static/img/gmarkers/building.png',
+                                            shadow: MEDIA_URL + 'img/gmarkers/shadow.png',
+                                            icon: MEDIA_URL + 'img/gmarkers/building.png',
                                             title: original_address,
                                             zIndex: 1
                                         });
@@ -168,8 +169,8 @@ function getNearBusStop(){
                           clickable: true,
                           position: location,
                           map: map,
-                          shadow: '/static/img/gmarkers/shadow.png',
-                          icon: '/static/img/gmarkers/building.png',
+                          shadow: MEDIA_URL + 'img/gmarkers/shadow.png',
+                          icon: MEDIA_URL + 'img/gmarkers/building.png',
                           title: 'Near Bus Stop',
                           zIndex: 2
                       });
@@ -183,9 +184,9 @@ function KmlLayer(){
     var url = window.location.href;
     // FIXME: Just for DEBUG
     if(url.indexOf('localhost') >= 0){
-	url = 'http://humitos.homelinux.net:8007/';
+	url = 'http://humitos.homelinux.net:8007';
     }
-    url += 'static/kml/' + direction + '_linea_' + line + '.kmz';
+    url += MEDIA_URL + 'kml/' + direction + '_linea_' + line + '.kmz';
 
     // $.each(layers, function(i, layer){
     // 	       layer.setMap(null);

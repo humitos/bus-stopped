@@ -9,6 +9,7 @@
     :license: BSD, see LICENSE for more details.
 """
 
+# We MUST import this file (filters.py) because it's required by LOADERS
 import filters
 import settings
 
@@ -25,7 +26,14 @@ from tipfy.ext.jinja2 import render_response
 
 
 def request_context(context):
+    js_settings = {
+        'MEDIA_URL': '\'' + settings.MEDIA_URL + '\'',
+        'INITIAL_LOCATION': settings.INITIAL_LOCATION,
+        }
+
     context.update({
+            'MEDIA_URL': settings.MEDIA_URL,
+            'JS_SETTINGS': js_settings,
             'news': News.all().order('-date'),
             })
     return context
@@ -66,9 +74,10 @@ class AjaxGetBusStopped(RequestHandler):
         return render_json_response(points)
 
 class AjaxGetBusStopTimes(RequestHandler):
-    def get(self, **kwargs):
+    def get(self, direction='Ida', **kwargs):
         bs = db.get(self.request.values.get('busstop_key'))
-        bus_times = bs.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES, direction='Ida')
+        bus_times = bs.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES,
+                                          direction=direction)
 
         times = []
         for bt in bus_times:
