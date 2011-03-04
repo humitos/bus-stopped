@@ -12,9 +12,11 @@ logger.addHandler(STDOUT)
 logger.setLevel(logging.DEBUG)
 
 class BusStop(db.Model):
-    name = db.StringProperty()
+    name = db.StringProperty(required=True)
     point = db.GeoPtProperty(required=True)
-    address = db.StringProperty()
+    address = db.StringProperty(required=True)
+    lines = db.StringListProperty(required=True)
+    directions = db.StringListProperty(required=True)
 
     def __repr__(self):
         return '%s' % self.name

@@ -8,6 +8,18 @@
 
     <!-- <script src="/static/js/detect-location.js" type="text/javascript"></script> -->
     <script src="/static/js/google-maps.js" type="text/javascript"></script>
+    <script type="text/javascript">
+function loadBusEvent(){
+    var line = $("select[id=lines] option:selected").val();
+    var direction = $("select[id=direction] option:selected").val();
+    loadBusStop(line, direction);
+}
+
+$(document).ready(function(){
+    $("select[name='direction']").change(loadBusEvent);
+    $("select[name='line']").change(loadBusEvent);
+});
+    </script>
 {% endblock%}
 
 {% block body_args%} onload="initialize()"{% endblock %}
@@ -17,13 +29,18 @@
 	  <div id="map_canvas" style="width: 400px; height: 500px;"></div>
 	  <div id="input-options">
 	    <span>Recorridos:</span>
-	    <select name="line">
+	    <select name="path-line">
 	      <option value="6">Línea 6</option>
 	    </select>
-	    <select name="direction">
+	    <select name="path-direction">
 	      <option value="vuelta">Vuelta (hacia Oro Verde)</option>
 	      <option value="ida">Ida (hacia Thompson)</option>
 	    </select>
+
+	    <br />
+	    Paradas: {{ form.lines }} {{ form.direction }}
+	    <br />
+
 	    <input name="submit" type="submit" value="Mostrar" onclick="javascript:KmlLayer()"></input>
 	  </div>
 	</div>

@@ -10,11 +10,22 @@ $(document).ready(function(){
                       map = new google.maps.Map(document.getElementById("map_canvas"),
                                                 myOptions);
                       bounds = new google.maps.LatLngBounds();
+		      
+		      // arrays to save the items
+		      markers = [];
+		      layers = [];
+		      last_info_window = new google.maps.InfoWindow();
                   });
 
-function initialize() {
+function loadBusStop(line, direction) {
+    var url = '/ajax/busstopped/';
+    url += line + '/' + direction;
 
-    $.getJSON('/ajax/busstopped', function(data){
+    $.each(markers, function(i, marker){
+    	       marker.setMap(null);
+    	   });
+
+    $.getJSON(url, function(data){
                   // Shape over the icon we can click
                   // var shape = {
                   //     coord: [0, 0, 21, 31],
@@ -35,20 +46,20 @@ function initialize() {
                                      shadow: point.shadow,
                                      icon: point.icon,
                                      shape: shape,
-                                     title: point.title,
+                                     title: point.name,
                                      zIndex: 1,
-                                     key: point.key
+                                     key: point.key,
+				     address: point.address
                                  });
+			     markers.push(marker);
 
                              bounds.extend(myLatLng);
                              google.maps.event.addListener(marker, 'click',
                                                            function(event) {
-                                                               $("input[name='latitude']").attr('value', marker.position.lat());
-                                                               $("input[name='longitude']").attr('value', marker.position.lng());
-                                                               $("input[name='name']").attr('value', marker.title);
-
+							       last_info_window.close();
                                                                $.getJSON('/ajax/point?busstop_key=' + marker.key, function(data){
-                                                                             var content = '<b>' + marker.title + '</b>';
+                                                                             var content = '<b>' + marker.title + '</b> ';
+									     content += marker.address;
                                                                              $.each(data, function(i, bus_time){
                                                                                         content += '<br /><b>' + bus_time.time_left  + ' min:</b> ' + bus_time.direction  + ' <span>' + bus_time.time + '</span>';
                                                                                     });
@@ -57,20 +68,19 @@ function initialize() {
                                                                                      content: content
                                                                                  });
                                                                              infowindow.open(map, marker);
+									     last_info_window = infowindow;
                                                                          });
 
                                                            });
                          });
               });
+}
 
+function initialize() {
+
+    loadBusStop('6', 'Ida');
     // map.fitBounds(bounds);
 
-    // Add a point
-    google.maps.event.addListener(map, 'click', 
-                                  function(event) {
-                                      $('input[name="latitude"]').attr('value', event.latLng.lat());
-                                      $('input[name="longitude"]').attr('value', event.latLng.lng());
-                                  });
 }
 
 function getDirection(){
@@ -167,8 +177,8 @@ function getNearBusStop(){
 }
 
 function KmlLayer(){
-    var line = $('select[name=line] option:selected').val();
-    var direction = $('select[name=direction] option:selected').val();
+    var line = $('select[name=path-line] option:selected').val();
+    var direction = $('select[name=path-direction] option:selected').val();
     // This .kml MUST be in public domain
     var url = window.location.href;
     // FIXME: Just for DEBUG
@@ -176,7 +186,13 @@ function KmlLayer(){
 	url = 'http://humitos.homelinux.net:8007/';
     }
     url += 'static/kml/' + direction + '_linea_' + line + '.kmz';
+
+    // $.each(layers, function(i, layer){
+    // 	       layer.setMap(null);
+    // 	   });
+
     var kml_layer = new google.maps.KmlLayer(url,
                                              {preserveViewport: true, suppressInfoWindows:true});
     kml_layer.setMap(map);
+    layers.push(kml_layer);
 }

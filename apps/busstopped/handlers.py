@@ -9,43 +9,19 @@
     :license: BSD, see LICENSE for more details.
 """
 
-import re
+import filters
 import settings
 
-from models import BusStop, News
-
+from models import BusStop, News, BusTime
+from forms import ViewBusStopLinesForm
 from dateutil.relativedelta import relativedelta
 
 # App Engine Imports
 from google.appengine.ext import db
 
 # TypFy imports
-from tipfy import RequestHandler, render_json_response
-from tipfy.ext.jinja2 import get_jinja2_instance, Jinja2Mixin, render_response
-
-from django.utils.text import truncate_html_words
-
-def filter_date(value, format):
-    return value.strftime(format)
-
-def filter_truncate_html_words(value, length):
-    return truncate_html_words(value, length)
-
-def filter_slugify(value):
-    """
-    Normalizes string, converts to lowercase, removes non-alpha characters,
-    and converts spaces to hyphens.
-    """
-    import unicodedata
-    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
-    value = unicode(re.sub('[^\w\s-]', '', value).strip().lower())
-    return re.sub('[-\s]+', '-', value)
-
-# Templating functions
-env = get_jinja2_instance()
-env.filters['date'] = filter_date
-env.filters['truncatewords_html'] = filter_truncate_html_words
-env.filters['slugify'] = filter_slugify
+from tipfy import RequestHandler, render_json_response, cached_property
+from tipfy.ext.jinja2 import render_response
 
 
 def request_context(context):
@@ -55,30 +31,37 @@ def request_context(context):
     return context
 
 
-class MainPage(RequestHandler, Jinja2Mixin):
+class MainPage(RequestHandler):
     def get(self, **kwargs):
         context = {
+            'form': self.form,
           }
 
         context = request_context(context)
 
         return render_response('index.html', **context)
 
+    @cached_property
+    def form(self):
+        return ViewBusStopLinesForm(self.request.values)
+
+
 class AjaxGetBusStopped(RequestHandler):
-    def get(self, **kwargs):
+    def get(self, line=None, direction=None, **kwargs):
         bus_stops = BusStop.all()
+        bus_stops.filter('lines =', line)
+        bus_stops.filter('directions =', direction)
 
         points = []
         for bs in bus_stops:
             points.append({
-                'title': bs.name,
+                'name': bs.name,
                 'key': str(bs.key()),
                 'address': bs.address,
                 'icon': '/static/img/gmarkers/red_bus.png',
                 'shadow': '/static/img/gmarkers/shadow_bus.png',
                 'latitude': bs.point.lat,
                 'longitude': bs.point.lon,
-                'description': '<b>' + bs.name + '</b>',
                 })
         return render_json_response(points)
 
@@ -126,4 +109,3 @@ class NewsPage(RequestHandler):
             }
 
         return render_response('news.html', **context)
-
