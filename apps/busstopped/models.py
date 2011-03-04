@@ -1,8 +1,8 @@
 import sys
-import pytz
 import logging
 import datetime
 
+import utils
 from google.appengine.ext import db
 
 # To make sure you're seeing all debug output:
@@ -25,21 +25,17 @@ class BusStop(db.Model):
         query = BusTime.gql('WHERE bus_stop = :1 ORDER BY time ASC', self.key())
         return query.fetch(query.count())
 
-    @classmethod
-    def now_time(self):
-        # This is a horrible hack because GAE saves time object in 01/01/1970
-        now_time = datetime.datetime.now(pytz.timezone('America/Argentina/Buenos_Aires'))
-        now_1970 = datetime.datetime(1970, 1, 1, now_time.hour, now_time.minute, 0)
-        return now_1970
-
     def get_next_bus_times(self, next_minutes, direction=None):
-        now = self.now_time()
+        weekday = utils.get_weekday_display()
+
+        now = utils.now_time()
         next_minutes = now + datetime.timedelta(minutes=next_minutes)
 
         query = db.Query(BusTime)
         query.filter('bus_stop =', self.key())
         query.filter('time <=', next_minutes)
         query.filter('time >=', now)
+        query.filter('days =', weekday)
         if direction:
             query.filter('direction =', direction)
         query.order('time')

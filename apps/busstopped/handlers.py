@@ -12,6 +12,7 @@
 # We MUST import this file (filters.py) because it's required by LOADERS
 import filters
 import settings
+import utils
 
 from models import BusStop, News, BusTime
 from forms import ViewBusStopLinesForm
@@ -26,9 +27,13 @@ from tipfy.ext.jinja2 import render_response
 
 
 def request_context(context):
+    def js_string(value):
+        return '\'' + value + '\''
+
     js_settings = {
-        'MEDIA_URL': '\'' + settings.MEDIA_URL + '\'',
+        'MEDIA_URL': js_string(settings.MEDIA_URL),
         'INITIAL_LOCATION': settings.INITIAL_LOCATION,
+        'WEEKDAY': js_string(utils.get_weekday_display()),
         }
 
     context.update({
@@ -93,7 +98,7 @@ class AjaxGetBusStopTimes(RequestHandler):
               'days': bt.days,
               'time': bt.time.strftime('%H:%M'),
               'direction': bt.direction,
-              'time_left': relativedelta(bt.time_1970(), BusStop.now_time()).minutes,
+              'time_left': relativedelta(bt.time_1970(), utils.now_time()).minutes,
               'comment': bt.comment,
               })
         return render_json_response(times)

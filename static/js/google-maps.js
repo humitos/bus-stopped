@@ -65,6 +65,7 @@ function loadBusStop(line, direction) {
                                                                $.getJSON(url, function(data){
                                                                              var content = '<b>' + marker.title + '</b> ';
 									     content += marker.address;
+									     content += '<br /><em style="font-size: 10px;">' + WEEKDAY  + '</em>';
                                                                              $.each(data, function(i, bus_time){
                                                                                         content += '<br /><b>' + bus_time.time_left  + ' min:</b> ' +
 											           bus_time.direction  + ' <span>' + bus_time.time + '</span>';
