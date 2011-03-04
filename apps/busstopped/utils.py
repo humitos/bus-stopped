@@ -9,6 +9,8 @@ def now_time():
 
 def get_weekday_display():
     weekday = datetime.date.today().weekday()
+    # Testing
+    # weekday = 6
     if weekday == 5:
         weekday = 'Sabados'
     elif weekday == 6:
