@@ -1,0 +1,18 @@
+BUS STOPPED
+===========
+
+ * ¿Qué es "Bus Stopped"?
+
+Básicamente es un sitio en el que aparecen las Paradas de Colectivo de
+"todas" (no aún) las líneas Urbanas de Paraná ubicadas en un mapa y
+con referencias sobre sus horarios para cada una de las paradas
+listadas.
+
+ * ¿Qué tecnologías usa el sitio?
+
+El sitio está hecho con Google App Engine y su framework integrado
+"webapp" utilizando la API V3 de Google Maps. El Layout y CSS del
+sitio lo descargue de Free CSS
+
+
+Contacto: humitos@gmail.com
