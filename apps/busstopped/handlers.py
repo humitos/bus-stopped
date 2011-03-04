@@ -118,10 +118,9 @@ class ChangeLogPage(RequestHandler):
 
 class NewsPage(RequestHandler):
     def get(self, **kwargs):
-        news = News.all()
-        news = news.order('-date')
         context = {
-            'news': news,
             }
+
+        context = request_context(context)
 
         return render_response('news.html', **context)
