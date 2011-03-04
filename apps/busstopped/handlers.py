@@ -94,6 +94,7 @@ class AjaxGetBusStopTimes(RequestHandler):
               'time': bt.time.strftime('%H:%M'),
               'direction': bt.direction,
               'time_left': relativedelta(bt.time_1970(), BusStop.now_time()).minutes,
+              'comment': bt.comment,
               })
         return render_json_response(times)
 

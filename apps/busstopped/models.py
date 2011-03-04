@@ -27,6 +27,7 @@ class BusStop(db.Model):
 
     @classmethod
     def now_time(self):
+        # This is a horrible hack because GAE saves time object in 01/01/1970
         now_time = datetime.datetime.now(pytz.timezone('America/Argentina/Buenos_Aires'))
         now_1970 = datetime.datetime(1970, 1, 1, now_time.hour, now_time.minute, 0)
         return now_1970
@@ -51,7 +52,7 @@ class BusTime(db.Model):
     bus_line = db.StringProperty(required=True)
     days = db.StringProperty(required=True, choices=set(['Habiles', 'Sabados', 'Domingos']))
     time = db.TimeProperty(required=True)
-    direction = db.StringProperty()
+    direction = db.StringProperty(choices=set(['Ida', 'Vuelta']))
     comment = db.StringProperty()
 
     def time_1970(self):
@@ -60,17 +61,6 @@ class BusTime(db.Model):
 
     def __repr__(self):
         return '%s' % self.time
-
-
-class BusRoute(db.Model):
-    bus_line = db.StringProperty(required=True)
-    buses_stops = db.ListProperty(db.Key, required=True)
-    direction = db.StringProperty(required=True, choices=set(['Ida', 'Vuelta']))
-    comment = db.StringProperty()
-
-
-    def __repr__(self):
-        return '%s - %s' % (self.direction, self.bus_line)
 
 
 class News(db.Model):

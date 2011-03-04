@@ -66,7 +66,11 @@ function loadBusStop(line, direction) {
                                                                              var content = '<b>' + marker.title + '</b> ';
 									     content += marker.address;
                                                                              $.each(data, function(i, bus_time){
-                                                                                        content += '<br /><b>' + bus_time.time_left  + ' min:</b> ' + bus_time.direction  + ' <span>' + bus_time.time + '</span>';
+                                                                                        content += '<br /><b>' + bus_time.time_left  + ' min:</b> ' +
+											           bus_time.direction  + ' <span>' + bus_time.time + '</span>';
+											if(bus_time.comment != ''){
+											    content += '<em> (' + bus_time.comment + ')</em>';
+											}
                                                                                     });
                                                                              var infowindow = new google.maps.InfoWindow(
                                                                                  {
