@@ -8,6 +8,6 @@
     --has_header \
     --log_file=../../bulkloader/logger.log \
     --db_filename=../../bulkloader/progress.sql3 \
-    --batch_size=100
+    --batch_size=5
 
 # ./remove_csv_files.sh
