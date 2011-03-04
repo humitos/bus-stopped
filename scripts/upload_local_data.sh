@@ -7,8 +7,8 @@
     --kind=$2 ../ \
     --url=http://localhost:8007/remote_api \
     --has_header \
-    --log_file=../../bulkloader/`date +%s`.log \
-    --db_filename=../../bulkloader/`date +%s`.sql3 \
+    --log_file=../../bulkloader/logger.log \
+    --db_filename=../../bulkloader/progress.sql3 \
     --batch_size=100
 
 # ./remove_csv_files.sh

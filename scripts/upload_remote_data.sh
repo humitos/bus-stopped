@@ -6,8 +6,8 @@
     --filename=$1_data.csv \
     --kind=$2 ../ \
     --has_header \
-    --log_file=../../bulkloader/`date +%s`.log \
-    --db_filename=../../bulkloader/`date +%s`.sql3 \
+    --log_file=../../bulkloader/logger.log \
+    --db_filename=../../bulkloader/progress.sql3 \
     --batch_size=100
 
 # ./remove_csv_files.sh
