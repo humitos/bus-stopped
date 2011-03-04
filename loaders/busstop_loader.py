@@ -15,15 +15,20 @@ from google.appengine.tools import bulkloader
 def parse_list(d):
     return d.split(',')
 
+def get_string(s):
+    return s.decode('utf-8')
+
 class BusStopLoader(bulkloader.Loader):
     def __init__(self):
         bulkloader.Loader.__init__(self, 'BusStop',
-                                   [('name', str),
-                                    ('point', str),
-                                    ('address', str),
-                                    ('lines', parse_list),
-                                    ('directions', parse_list),
-                                    ])
+                                   [
+                ('id', int),
+                ('name', get_string),
+                ('point', get_string),
+                ('address', get_string),
+                ('lines', parse_list),
+                ('directions', parse_list),
+                ])
 
     def generate_key(self, i, values):
         return values[0]

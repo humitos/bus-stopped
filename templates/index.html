@@ -17,7 +17,7 @@ function loadBusEvent(){
 
 $(document).ready(function(){
     $("select[name='direction']").change(loadBusEvent);
-    $("select[name='line']").change(loadBusEvent);
+    $("select[name='lines']").change(loadBusEvent);
 });
     </script>
 {% endblock%}
@@ -28,20 +28,22 @@ $(document).ready(function(){
 	<div id="content">
 	  <div id="map_canvas" style="width: 400px; height: 500px;"></div>
 	  <div id="input-options">
-	    <span>Recorridos:</span>
-	    <select name="path-line">
-	      <option value="6">Línea 6</option>
-	    </select>
-	    <select name="path-direction">
-	      <option value="vuelta">Vuelta (hacia Oro Verde)</option>
-	      <option value="ida">Ida (hacia Thompson)</option>
-	    </select>
+
+	    <!-- RECORRIDOS -->
+	    <!-- <span>Recorridos:</span> -->
+	    <!-- <select name="path-line"> -->
+	    <!--   <option value="6">Línea 6</option> -->
+	    <!-- </select> -->
+	    <!-- <select name="path-direction"> -->
+	    <!--   <option value="vuelta">Vuelta (hacia Oro Verde)</option> -->
+	    <!--   <option value="ida">Ida (hacia Thompson)</option> -->
+	    <!-- </select> -->
+	    <!-- <input name="submit" type="submit" value="Mostrar" onclick="javascript:KmlLayer()"></input> -->
 
 	    <br />
 	    Paradas: {{ form.lines }} {{ form.direction }}
 	    <br />
 
-	    <input name="submit" type="submit" value="Mostrar" onclick="javascript:KmlLayer()"></input>
 	  </div>
 	</div>
 {% endblock %}

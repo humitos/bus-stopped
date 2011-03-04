@@ -11,7 +11,7 @@ from apps.busstopped.models import *
 from google.appengine.tools import bulkloader
 
 def get_date(d):
-    return datetime.datetime.strptime(d, '%d/%m/%y').date()
+    return datetime.datetime.strptime(d, '%d/%m/%Y').date()
 
 def get_string(s):
     return s.decode('utf-8')

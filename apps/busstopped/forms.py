@@ -2,7 +2,7 @@
 
 from wtforms import Form, fields
 
-from models import BusTime
+from models import BusStop, BusTime
 
 class ViewBusStopLinesForm(Form):
     lines = fields.SelectField(u'Líneas')
@@ -11,4 +11,11 @@ class ViewBusStopLinesForm(Form):
 
     def __init__(self, *args, **kwargs):
         super(ViewBusStopLinesForm, self).__init__(*args, **kwargs)
-        self.lines.choices = set([(bt.bus_line, u'Línea %s' % bt.bus_line) for bt in BusTime.all()])
+
+        busses_stops = BusStop.all()
+        busses_stops.order('lines')
+        lines = set()
+        for bs in busses_stops:
+            for l in bs.lines:
+                lines.add((l, u'Línea %s' % l))
+        self.lines.choices = lines

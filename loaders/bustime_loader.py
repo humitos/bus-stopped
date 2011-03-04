@@ -21,17 +21,27 @@ def bus_stop_key(i):
     bus_stop = db.get(bs_key)
     return bus_stop
 
+def get_string(s):
+    return s.decode('utf-8')
+
+def get_list(s):
+    if s:
+        return map(get_string, s.split(','))
+    else:
+        return []
 
 class BusTimeLoader(bulkloader.Loader):
     def __init__(self):
         bulkloader.Loader.__init__(self, 'BusTime',
-                                   [('bus_stop', bus_stop_key),
-                                    ('bus_line', str),
-                                    ('days', str),
-                                    ('time', get_time),
-                                    ('comment', str),
-                                    ('direction', str),
-                                    ])
+                                   [
+                ('_UNUSED', lambda x: None),
+                ('bus_stop', bus_stop_key),
+                ('bus_line', get_string),
+                ('days', get_string),
+                ('time', get_time),
+                ('comments', get_list),
+                ('direction', get_string),
+                ])
 
 
 loaders = [BusTimeLoader]

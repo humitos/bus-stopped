@@ -81,27 +81,33 @@ class AjaxGetBusStopped(RequestHandler):
 
 class AjaxGetBusStopTimes(RequestHandler):
     def get(self, **kwargs):
-        bs = db.get(self.request.values.get('busstop_key'))
+        bus_stop = db.get(self.request.values.get('busstop_key'))
         directions = self.request.values.get('directions', '')
 
         if len(directions.split(',')) == 2:
             directions = None
         else:
             directions = directions
-        bus_times = bs.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES,
-                                          direction=directions)
+        bus_times = bus_stop.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES,
+                                                direction=directions)
 
-        times = []
-        for bt in bus_times:
-          times.append({
-              'bus_stop': str(bt.bus_stop.key()),
-              'days': bt.days,
-              'time': bt.time.strftime('%H:%M'),
-              'direction': bt.direction,
-              'time_left': relativedelta(bt.time_1970(), utils.now_time()).minutes,
-              'comment': bt.comment,
-              })
-        return render_json_response(times)
+        info_content = '<b>%s</b><br /> %s<br /><em style="font-size: 10px">%s</em>' % \
+            (bus_stop.name, bus_stop.address, utils.get_weekday_display())
+        for bus_time in bus_times:
+            info_content += '<br /><b>%s min:</b> %s <span>%s</span>' % \
+                (relativedelta(bus_time.time_1970(), utils.now_time()).minutes,
+                 bus_time.direction, bus_time.time.strftime('%H:%M'))
+
+            if bus_time.comments:
+                info_content += '<em> ('
+                for comment in bus_time.comments:
+                    info_content += '%s, ' % comment
+                info_content = info_content[:-2]
+                info_content += ')</em>'
+
+        return render_json_response({
+                'info_content': info_content
+                })
 
 
 class FAQPage(RequestHandler):

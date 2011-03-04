@@ -2,4 +2,4 @@ div#content ul.faq li {list-style: none;}
 div#content ul.news li {list-style: none;}
 div#w3c-icons {text-align: center;margin-top: 15px;}
 .date-change-log {font-size: 11px; }
-div#input-options {margin-top: 15px;}
+div#input-options {margin-top: 15px;margin-bottom: 15px}

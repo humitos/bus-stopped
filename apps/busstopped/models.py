@@ -29,6 +29,8 @@ class BusStop(db.Model):
         weekday = utils.get_weekday_display()
 
         now = utils.now_time()
+        # Testing
+        # now = datetime.datetime(1970,1,1,5,30,0)
         next_minutes = now + datetime.timedelta(minutes=next_minutes)
 
         query = db.Query(BusTime)
@@ -49,7 +51,7 @@ class BusTime(db.Model):
     days = db.StringProperty(required=True, choices=set(['Habiles', 'Sabados', 'Domingos']))
     time = db.TimeProperty(required=True)
     direction = db.StringProperty(choices=set(['Ida', 'Vuelta']))
-    comment = db.StringProperty()
+    comments = db.StringListProperty()
 
     def time_1970(self):
         return datetime.datetime(1970, 1, 1, self.time.hour,
