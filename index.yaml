@@ -19,6 +19,13 @@ indexes:
 - kind: BusTime
   properties:
   - name: bus_stop
+  - name: direction
+  - name: time
+    direction: desc
+
+- kind: BusTime
+  properties:
+  - name: bus_stop
   - name: time
 
 - kind: BusTime

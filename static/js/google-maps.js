@@ -61,7 +61,7 @@ function loadBusStop(line, direction) {
 							       last_info_window.close();
 							       var url = '/ajax/point?';
 							       url += 'busstop_key=' + marker.key;
-							       url += '&directions=' + marker.directions;
+							       url += '&directions=' + $("select[id=direction] option:selected").val();
                                                                $.getJSON(url, function(data){
                                                                              var content = '<b>' + marker.title + '</b> ';
 									     content += marker.address;

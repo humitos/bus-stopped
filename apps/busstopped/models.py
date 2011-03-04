@@ -41,6 +41,7 @@ class BusStop(db.Model):
         query.filter('time >=', now)
         if direction:
             query.filter('direction =', direction)
+        query.order('time')
         results = query.fetch(query.count())
         return results
 
