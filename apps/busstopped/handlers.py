@@ -70,14 +70,21 @@ class AjaxGetBusStopped(RequestHandler):
                 'shadow': '/static/img/gmarkers/shadow_bus.png',
                 'latitude': bs.point.lat,
                 'longitude': bs.point.lon,
+                'directions': bs.directions,
                 })
         return render_json_response(points)
 
 class AjaxGetBusStopTimes(RequestHandler):
-    def get(self, direction='Ida', **kwargs):
+    def get(self, **kwargs):
         bs = db.get(self.request.values.get('busstop_key'))
+        directions = self.request.values.get('directions', '')
+
+        if len(directions.split(',')) == 2:
+            directions = None
+        else:
+            directions = directions
         bus_times = bs.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES,
-                                          direction=direction)
+                                          direction=directions)
 
         times = []
         for bt in bus_times:

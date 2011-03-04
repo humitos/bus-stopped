@@ -50,7 +50,8 @@ function loadBusStop(line, direction) {
                                      title: point.name,
                                      zIndex: 1,
                                      key: point.key,
-				     address: point.address
+				     address: point.address,
+				     directions: point.directions
                                  });
 			     markers.push(marker);
 
@@ -58,7 +59,10 @@ function loadBusStop(line, direction) {
                              google.maps.event.addListener(marker, 'click',
                                                            function(event) {
 							       last_info_window.close();
-                                                               $.getJSON('/ajax/point?busstop_key=' + marker.key, function(data){
+							       var url = '/ajax/point?';
+							       url += 'busstop_key=' + marker.key;
+							       url += '&directions=' + marker.directions;
+                                                               $.getJSON(url, function(data){
                                                                              var content = '<b>' + marker.title + '</b> ';
 									     content += marker.address;
                                                                              $.each(data, function(i, bus_time){

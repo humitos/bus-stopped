@@ -31,7 +31,7 @@ class BusStop(db.Model):
         now_1970 = datetime.datetime(1970, 1, 1, now_time.hour, now_time.minute, 0)
         return now_1970
 
-    def get_next_bus_times(self, next_minutes, direction='Ida'):
+    def get_next_bus_times(self, next_minutes, direction=None):
         now = self.now_time()
         next_minutes = now + datetime.timedelta(minutes=next_minutes)
 
@@ -39,7 +39,8 @@ class BusStop(db.Model):
         query.filter('bus_stop =', self.key())
         query.filter('time <=', next_minutes)
         query.filter('time >=', now)
-        query.filter('direction =', direction)
+        if direction:
+            query.filter('direction =', direction)
         results = query.fetch(query.count())
         return results
 
