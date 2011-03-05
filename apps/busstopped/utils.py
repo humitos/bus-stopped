@@ -41,9 +41,10 @@ def parse_times(filename, lines, direction, days):
         ]
 
     references = {
-        '5': {'Ida': [(' (1)', 'Sale de Barrio 41 Viviendas'),
-                      (' (2)', 'Sale de Seminario Parana')],
-              }
+        '5': {'Ida':    [(' (1)', 'Sale de Barrio 41 Viviendas'),
+                         (' (3)', 'Sale de Seminario Parana')],
+              'Vuelta': [(' (2)', 'Llega hasta Barrio 41 Viviendas'),
+                         (' (4)', 'Llega hasta Seminario Parana')],}
         }
 
 
