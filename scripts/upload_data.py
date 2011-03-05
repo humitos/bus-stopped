@@ -34,7 +34,7 @@ else:
     --batch_size=100
 '''
 
-for filename in glob.glob('../fixtures/*.csv'):
+for filename in sorted(glob.glob('../fixtures/*.csv')):
     csv_filename = filename
     filename = os.path.basename(filename)
 
