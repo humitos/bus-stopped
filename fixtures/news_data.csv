@@ -1,4 +1,6 @@
-"Date","Title","Text"
-"02/03/11","Estamos en alpha! ","<p>Esta es la primera publicación de este sitio. Actualmente no están cargadas todas las paradas de colectivo ni todos sus horarios, únicamente la Línea 6 y las paradas de IDA de su recorrido.</p> <p>Haciendo click sobre cada uno de los íconos de información se muestran los colectivos que pasan por ese lugar en los próximos 30 minutos.</p> <p><em>**Mandame un mail con sugerencias, errores y comentarios!</em></p>"
-"03/03/11","Recorridos!","<p>Agregué una funcionalidad para poder mostrar los recorridos de los colectivos en sus dos direcciones: Ida y Vuelta</p>"
-"03/03/11","GitHub","<p>Publiqué el código en <a href=""https://github.com/humitos/bus-stopped"">GitHub</a></p>"
+Date,Title,Text
+2/3/2011,Estamos en alpha! ,"<p>Esta es la primera publicación de este sitio. Actualmente no están cargadas todas las paradas de colectivo ni todos sus horarios, únicamente la Línea 6 y las paradas de IDA de su recorrido.</p> <p>Haciendo click sobre cada uno de los íconos de información se muestran los colectivos que pasan por ese lugar en los próximos 30 minutos.</p> <p><em>**Mandame un mail con sugerencias, errores y comentarios!</em></p>"
+3/3/2011,Recorridos!,<p>Agregué una funcionalidad para poder mostrar los recorridos de los colectivos en sus dos direcciones: Ida y Vuelta</p>
+3/3/2011,GitHub,"<p>Publiqué el código en <a href=""https://github.com/humitos/bus-stopped"">GitHub</a></p>"
+4/3/2011,Linea 5,<p>Estan cargados los horarios de la <b>Linea 5</b> tal cual figuran en su sitio web.<p>
+5/3/2011,Linea 1,"<p>Estan cargados los horarios de la <b>Linea 1</b> tal cual figuran en su sitio web: Ida y Vuelta para los dias Habiles, Sabados y Domingos.<p>"
