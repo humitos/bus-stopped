@@ -136,3 +136,37 @@ class NewsPage(RequestHandler):
         context = request_context(context)
 
         return render_response('news.html', **context)
+
+
+# URL to generate the .csv data
+# http://localhost:8007/parse?direction=Vuelta&days=Habiles&filename=1_habiles_vuelta.csv&lines=1
+class ParseTimesPage(RequestHandler):
+    def get(self, **kwargs):
+        import cStringIO
+        import csv
+        from tipfy import Response
+        from utils import parse_times
+
+        direction = self.request.values.get('direction')
+        days = self.request.values.get('days')
+        filename = self.request.values.get('filename')
+        lines = self.request.values.get('lines')
+
+        bus_times = parse_times(filename, lines, direction, days)
+
+        f = cStringIO.StringIO()
+        csv_writer = csv.writer(f)
+        csv_writer.writerows(bus_times)
+        csv_file = f.getvalue()
+        f.close()
+
+        context = {
+            'bus_times': bus_times,
+            }
+
+        context = request_context(context)
+        response = Response()
+        response.data = csv_file
+        response.headers['Content-Type'] = 'text/csv'
+        response.headers['Content-Disposition'] = 'attachment; filename="%s"' % ('parsed__' + filename)
+        return response

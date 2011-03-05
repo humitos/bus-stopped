@@ -26,6 +26,7 @@ def get_rules(app):
         Rule('/faq', endpoint='faq', handler='apps.busstopped.handlers.FAQPage'),
         Rule('/changelog', endpoint='change-log', handler='apps.busstopped.handlers.ChangeLogPage'),
         Rule('/news', endpoint='news', handler='apps.busstopped.handlers.NewsPage'),
+        Rule('/parse', endpoint='parse', handler='apps.busstopped.handlers.ParseTimesPage'),
     ]
 
     return rules
