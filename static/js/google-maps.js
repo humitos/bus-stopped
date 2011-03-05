@@ -79,7 +79,7 @@ function loadBusStop(line, direction) {
 
 function initialize() {
 
-    loadBusStop('5', 'Ida');
+    loadBusEvent();
     // map.fitBounds(bounds);
 
 }
