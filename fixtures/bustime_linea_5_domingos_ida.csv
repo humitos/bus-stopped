@@ -1,0 +1,127 @@
+BusStop Name (ignored),BusStop ID,Line,Days,Time,Comment,Direction
+WalMart,15,5,Domingos,05:56:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,06:37:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,07:07:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,07:39:00,,Ida
+WalMart,15,5,Domingos,08:15:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,08:40:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,09:04:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,09:28:00,,Ida
+WalMart,15,5,Domingos,09:52:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,10:16:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,10:40:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,11:04:00,,Ida
+WalMart,15,5,Domingos,11:28:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,11:52:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,12:16:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,12:40:00,,Ida
+WalMart,15,5,Domingos,13:10:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,13:40:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,14:10:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,14:40:00,,Ida
+WalMart,15,5,Domingos,15:10:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,15:40:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,16:10:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,16:40:00,,Ida
+WalMart,15,5,Domingos,17:10:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,17:34:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,17:58:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,18:22:00,,Ida
+WalMart,15,5,Domingos,18:46:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,19:10:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,19:34:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,19:58:00,,Ida
+WalMart,15,5,Domingos,20:22:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,20:46:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,21:10:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,21:40:00,,Ida
+WalMart,15,5,Domingos,22:10:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,22:40:00,Por Av. Estrada,Ida
+WalMart,15,5,Domingos,23:02:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,23:27:00,,Ida
+WalMart,15,5,Domingos,23:52:00,Entra a Bº Mosconi,Ida
+WalMart,15,5,Domingos,00:30:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,05:49:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,06:30:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,07:00:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,07:30:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,08:05:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,08:30:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,08:54:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,09:18:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,09:42:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,10:06:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,10:30:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,10:54:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,11:18:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,11:42:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,12:06:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,12:30:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,13:00:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,13:30:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,14:00:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,14:30:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,15:00:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,15:30:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,16:00:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,16:30:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,17:00:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,17:24:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,17:48:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,18:12:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,18:36:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,19:00:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,19:24:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,19:48:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,20:12:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,20:36:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,21:00:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,21:30:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,22:00:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,22:30:00,Por Av. Estrada,Ida
+Plaza 1ro de Mayo,16,5,Domingos,22:55:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,23:20:00,,Ida
+Plaza 1ro de Mayo,16,5,Domingos,23:45:00,Entra a Bº Mosconi,Ida
+Plaza 1ro de Mayo,16,5,Domingos,00:23:00,,Ida
+Barrio AATRA,9,5,Domingos,05:25:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,06:00:00,Por Av. Estrada,Ida
+Barrio AATRA,9,5,Domingos,6:30:00,"Entra a Bº Mosconi,Sale de Barrio 41 Viviendas",Ida
+Barrio AATRA,9,5,Domingos,07:00:00,,Ida
+Barrio AATRA,9,5,Domingos,07:35:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,08:00:00,Por Av. Estrada,Ida
+Barrio AATRA,9,5,Domingos,08:24:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,08:48:00,,Ida
+Barrio AATRA,9,5,Domingos,9:12:00,"Entra a Bº Mosconi,Sale de Barrio 41 Viviendas",Ida
+Barrio AATRA,9,5,Domingos,09:36:00,Por Av. Estrada,Ida
+Barrio AATRA,9,5,Domingos,10:00:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,10:24:00,,Ida
+Barrio AATRA,9,5,Domingos,10:48:00,"Entra a Bº Mosconi,Sale de Barrio 41 Viviendas",Ida
+Barrio AATRA,9,5,Domingos,11:12:00,Por Av. Estrada,Ida
+Barrio AATRA,9,5,Domingos,11:36:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,12:00:00,,Ida
+Barrio AATRA,9,5,Domingos,12:30:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,13:00:00,Por Av. Estrada,Ida
+Barrio AATRA,9,5,Domingos,13:30:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,14:00:00,,Ida
+Barrio AATRA,9,5,Domingos,14:30:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,15:00:00,Por Av. Estrada,Ida
+Barrio AATRA,9,5,Domingos,15:30:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,16:00:00,,Ida
+Barrio AATRA,9,5,Domingos,16:30:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,16:54:00,"Por Av. Estrada,Sale de Barrio 41 Viviendas",Ida
+Barrio AATRA,9,5,Domingos,17:18:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,17:42:00,,Ida
+Barrio AATRA,9,5,Domingos,18:06:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,18:30:00,"Por Av. Estrada,Sale de Barrio 41 Viviendas",Ida
+Barrio AATRA,9,5,Domingos,18:54:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,19:18:00,,Ida
+Barrio AATRA,9,5,Domingos,19:42:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,20:06:00,"Por Av. Estrada,Sale de Barrio 41 Viviendas",Ida
+Barrio AATRA,9,5,Domingos,20:30:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,21:00:00,,Ida
+Barrio AATRA,9,5,Domingos,21:30:00,"Entra a Bº Mosconi,Sale de Barrio 41 Viviendas",Ida
+Barrio AATRA,9,5,Domingos,22:00:00,Por Av. Estrada,Ida
+Barrio AATRA,9,5,Domingos,22:30:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,22:55:00,,Ida
+Barrio AATRA,9,5,Domingos,23:20:00,Entra a Bº Mosconi,Ida
+Barrio AATRA,9,5,Domingos,00:00:00,,Ida
