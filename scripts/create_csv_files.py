@@ -22,15 +22,18 @@ def parse_times(filename, line, direction, days):
 
     # References to Replace
     references = {
+        '1': {'Ida':    [],
+              'Vuelta': [],
+              },
         '5': {'Ida':    [(' (1)', 'Sale de Barrio 41 Viviendas'),
                          (' (3)', 'Sale de Seminario Parana')],
               'Vuelta': [(' (2)', 'Llega hasta Barrio 41 Viviendas'),
                          (' (4)', 'Llega hasta Seminario Parana')],},
-        '1': {'Ida':    [],
-              'Vuelta': [],
-              },
         '6': {'Ida':    [],
               'Vuelta': [],
+              },
+        '10': {'Ida':    [(' (1)', 'Sale desde Barrio A.S.S.V.E.R.')],
+               'Vuelta': [(' (2)', 'Llega hasta Barrio A.S.S.V.E.R.')],
               },
         }
 
@@ -48,7 +51,7 @@ def parse_times(filename, line, direction, days):
                         comments = ''
                     else:
                         comments += ','
-                        comments += message
+                    comments += message
                     column += ':00'
                 column = column.strip()
 
