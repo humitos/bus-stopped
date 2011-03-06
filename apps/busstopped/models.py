@@ -3,6 +3,7 @@ import logging
 import datetime
 
 import utils
+import settings
 from google.appengine.ext import db
 
 # To make sure you're seeing all debug output:
@@ -41,7 +42,12 @@ class BusStop(db.Model):
         if direction:
             query.filter('direction =', direction)
         query.order('time')
-        results = query.fetch(query.count())
+        count = query.count()
+        # Try again if there are any time.
+        if count == 0:
+            # FIXME: this could be dangerous (infinite recursion)
+            return self.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES + 30, direction)
+        results = query.fetch(count)
         return results
 
 
