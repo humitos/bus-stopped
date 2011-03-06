@@ -1,23 +1,29 @@
-ID,Name,GeoPoint,Address,Lines,Direction
-1,Oro Verde,"-31.81836,-60.51515",Oro Verde,6,"Ida,Vuelta"
-2,Km. 5 1/2,"-31.77810,-60.51991",Km. 5 1/2,6,"Ida,Vuelta"
-3,Plaza 1ro de Mayo,"-31.73345,-60.53025",San Martin y 25 de Mayo,6,Ida
-4,Balneario Thompson,"-31.71859,-60.51060",Du Gratty y Soler,6,"Ida,Vuelta"
-5,Av. Americas y M. Lebhenson,"-31.76331,-60.52839",Av. Americas y M. Lebhenson,6,"Ida,Vuelta"
-6,Av. Americas y Bv. Racedo,"-31.74714,-60.52490",Av. Americas y Bv. Racedo,6,"Ida,Vuelta"
-7,Plaza Alvear,"-31.72754, -60.53008",Buenos Aires y Laprida,6,Vuelta
-8,Plaza Alberdi,"-31.73401, -60.52535",Gral. Urquiza y Arturo Illia,6,Vuelta
-9,Barrio AATRA,"-31.73672, -60.49085",Don Bosco y F. Beiro,5,"Ida,Vuelta"
-10,Don Bosco y Rondeau,"-31.73557, -60.49884",Don Bosco y Rondeau,5,"Ida,Vuelta"
-11,Alte. Brown y P. Grella,"-31.73884, -60.50894",Alte. Brown y P. Grella,5,"Ida,Vuelta"
-12,5 Esquinas,"-31.74227, -60.51894",Gualeguaychu y Av. Ramirez,5,"Ida,Vuelta"
-13,Plaza 1ro de Mayo,"-31.73433, -60.53004",Monte Caseros y 25 de Mayo,5,Vuelta
-14,Cervantes y Cordoba,"-31.72886, -60.53306",Cervantes y Cordoba,5,Vuelta
-15,WalMart,"-31.72196, -60.54647",Larramendi y A. Medina,5,"Ida,Vuelta"
-16,Bajada Grande,"-31.70603, -60.56626",Estrada y Croacia,5,"Ida,Vuelta"
-30,Barrio Policial,"-31.75204, -60.48560",Quinquela Martin y Astomi,1,"Ida,Vuelta"
-31,Churruarin y Rondeau,"-31.74517, -60.50094",Churruarin y Rondeau,1,"Ida,Vuelta"
-32,5 Esquinas,"-31.74111, -60.51764",Urdinarrain y Av. Ramírez,1,Ida
-33,Plaza 1ro de Mayo,"-31.73348, -60.53025",25 de Mayo y Montecaseros,1,Ida
-34,Hospital Roballos / Toma Nueva,"-31.71166, -60.49362",Rondeau y J. Jozami,1,"Ida,Vuelta"
-35,Plaza Alvear,"-31.72747, -60.53012",Buenos Aires y Laprida,1,Vuelta
+"ID","Name","GeoPoint","Address","Lines","Direction"
+1,"Oro Verde","-31.81836,-60.51515","Oro Verde",6,"Ida,Vuelta"
+2,"Km. 5 1/2","-31.77810,-60.51991","Km. 5 1/2",6,"Ida,Vuelta"
+3,"Plaza 1ro de Mayo","-31.73345,-60.53025","San Martin y 25 de Mayo",6,"Ida"
+4,"Balneario Thompson","-31.71859,-60.51060","Du Gratty y Soler",6,"Ida,Vuelta"
+5,"Av. Americas y M. Lebhenson","-31.76331,-60.52839","Av. Americas y M. Lebhenson",6,"Ida,Vuelta"
+6,"Av. Americas y Bv. Racedo","-31.74714,-60.52490","Av. Americas y Bv. Racedo",6,"Ida,Vuelta"
+7,"Plaza Alvear","-31.72754, -60.53008","Buenos Aires y Laprida",6,"Vuelta"
+8,"Plaza Alberdi","-31.73401, -60.52535","Gral. Urquiza y Arturo Illia",6,"Vuelta"
+9,"Barrio AATRA","-31.73672, -60.49085","Don Bosco y F. Beiro",5,"Ida,Vuelta"
+10,"Don Bosco y Rondeau","-31.73557, -60.49884","Don Bosco y Rondeau",5,"Ida,Vuelta"
+11,"Alte. Brown y P. Grella","-31.73884, -60.50894","Alte. Brown y P. Grella",5,"Ida,Vuelta"
+12,"5 Esquinas","-31.74227, -60.51894","Gualeguaychu y Av. Ramirez",5,"Ida,Vuelta"
+13,"Plaza 1ro de Mayo","-31.73433, -60.53004","Monte Caseros y 25 de Mayo",5,"Vuelta"
+14,"Cervantes y Cordoba","-31.72886, -60.53306","Cervantes y Cordoba",5,"Vuelta"
+15,"WalMart","-31.72196, -60.54647","Larramendi y A. Medina",5,"Ida,Vuelta"
+16,"Bajada Grande","-31.70603, -60.56626","Estrada y Croacia",5,"Ida,Vuelta"
+30,"Barrio Policial","-31.75204, -60.48560","Quinquela Martin y Astomi",1,"Ida,Vuelta"
+31,"Churruarin y Rondeau","-31.74517, -60.50094","Churruarin y Rondeau",1,"Ida,Vuelta"
+32,"5 Esquinas","-31.74111, -60.51764","Urdinarrain y Av. Ramírez",1,"Ida"
+33,"Plaza 1ro de Mayo","-31.73348, -60.53025","25 de Mayo y Montecaseros",1,"Ida"
+34,"Hospital Roballos / Toma Nueva","-31.71166, -60.49362","Rondeau y J. Jozami",1,"Ida,Vuelta"
+35,"Plaza Alvear","-31.72747, -60.53012","Buenos Aires y Laprida",1,"Vuelta"
+36,"Barrio Santa Lucía","-31.77221, -60.51875","División Los Andes y Jorge Newbery",10,"Ida,Vuelta"
+37,"Av. Americas y Bv. Racedo","-31.74684, -60.52493","Av. Americas y Bv. Racedo",10,"Ida"
+38,"Plaza 1ro de Mayo","-31.73340, -60.53021","Monte Caseros y 25 de Mayo",10,"Ida"
+39,"Toma Vieja","-31.70383, -60.48328","Blas Pareras",10,"Ida,Vuelta"
+40,"Toma Nueva","-31.71151, -60.49352","Rondeau y J. Jozami",10,"Ida,Vuelta"
+41,"Plaza Alvear","-31.72756, -60.53019","Buenos Aires y Laprida",10,"Vuelta"
