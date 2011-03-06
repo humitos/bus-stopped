@@ -137,3 +137,13 @@ class NewsPage(RequestHandler):
 
         return render_response('news.html', **context)
 
+
+class InfoPage(RequestHandler):
+    def get(self, **kwargs):
+        context = {
+            }
+
+        context = request_context(context)
+
+        return render_response('info.html', **context)
+
