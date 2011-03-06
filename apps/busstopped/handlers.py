@@ -141,6 +141,7 @@ class NewsPage(RequestHandler):
 class InfoPage(RequestHandler):
     def get(self, **kwargs):
         context = {
+            'all_news': News.all().order('-date'),
             }
 
         context = request_context(context)
