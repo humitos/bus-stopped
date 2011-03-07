@@ -67,6 +67,13 @@ class BusTime(db.Model):
         return '%s' % self.time
 
 
+class BusDirection(db.Model):
+    bus_line = db.StringProperty(required=True)
+    direction = db.StringProperty(choices=set(['Ida', 'Vuelta']))
+    from_direction = db.StringProperty(required=True)
+    to_direction = db.StringProperty(required=True)
+
+
 class News(db.Model):
     date = db.DateProperty(required=True)
     text = db.TextProperty(required=True)

@@ -37,7 +37,9 @@ function loadBusStop(line, direction) {
                       type: 'circle'
                   };
 
-                  $.each(data, function(i, point){
+		  $('#directions').html(data.directions_html);
+
+                  $.each(data.points, function(i, point){
                              var myLatLng = new google.maps.LatLng(point['latitude'], point['longitude']);
                              var marker = new google.maps.Marker(
                                  {

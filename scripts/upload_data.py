@@ -6,6 +6,7 @@ kinds = {
     'busstop': 'BusStop',
     'bustime': 'BusTime',
     'news': 'News',
+    'busdirection': 'BusDirection',
 }
 
 remote = '--remote' in sys.argv

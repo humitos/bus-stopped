@@ -14,7 +14,7 @@ import filters
 import settings
 import utils
 
-from models import BusStop, News, BusTime
+from models import BusStop, News, BusTime, BusDirection
 from forms import ViewBusStopLinesForm
 from dateutil.relativedelta import relativedelta
 
@@ -65,6 +65,16 @@ class AjaxGetBusStopped(RequestHandler):
         bus_stops.filter('lines =', line)
         bus_stops.filter('directions =', direction)
 
+        ds = BusDirection.all()
+        ds.filter('bus_line =', line)
+        ds.filter('direction =', direction)
+
+        # TODO: improve this feature
+        directions_html = ''
+        for d in ds:
+            directions_html += '<strong>%s:</strong><ul><li>Desde: <em>%s</em></li><li>Hasta: <em>%s</em></li></ul>' % (d.direction,
+                                                                                                  d.from_direction,
+                                                                                                  d.to_direction)
         points = []
         for bs in bus_stops:
             points.append({
@@ -77,7 +87,9 @@ class AjaxGetBusStopped(RequestHandler):
                 'longitude': bs.point.lon,
                 'directions': bs.directions,
                 })
-        return render_json_response(points)
+        data = {'points': points,
+                'directions_html': directions_html}
+        return render_json_response(data)
 
 class AjaxGetBusStopTimes(RequestHandler):
     def get(self, **kwargs):
