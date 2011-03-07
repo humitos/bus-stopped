@@ -3,7 +3,7 @@
   <head>
     <title>{% block title %}Bus Stopped | Encontra tu parada!{% endblock %}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta property="fb:admins" content="100000464398013" />
+    <meta property="fb:admins" content="100000464398013">
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <script type="text/javascript">
@@ -31,7 +31,7 @@
     <div id="container">
       <div id="header">
 	<h1>
-	  <a href="/"><img style="border: 0;" src="{{ MEDIA_URL }}img/gmarkers/blue_bus.png" />Bus Stopped | Encontra tu parada de colectivo</a>
+	  <a href="/"><img alt="Bus Stopped" style="border: 0;" src="{{ MEDIA_URL }}img/gmarkers/blue_bus.png" />Bus Stopped | Encontra tu parada de colectivo</a>
 	</h1>
       </div>
       <div id="wrapper">
@@ -44,7 +44,7 @@
 	<h2>Noticias</h2>
 	{% for n in news %}
 	<p><a href="/news#{{ n.title|slugify }}">{{ n.date|date("%d/%m/%y") }}: <strong>{{ n.title }}</strong></a></p>
-	{{ n.text|truncatewords_html(25) }}
+	{{ n.text|truncatewords_html(20) }}
 	{% endfor %}
       </div>
       <div id="footer">
