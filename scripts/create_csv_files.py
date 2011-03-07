@@ -48,6 +48,11 @@ def parse_times(filename, line, direction, days):
                             (' (SR)', ''),
                             (' (LM)', ''),],
               },
+        '15': {'Ida':    [(' (1)', ''),
+                          (' (2)', ''),],
+               'Vuelta': [(' (3)', ''),
+                          (' (4)', ''),]
+              },
         # '1121': {'Ida':    [(' (SL)', 'Sale de Santa Lucia'),
         #                     (' (DP)', 'Sale de Divina Providencia'),
         #                     (' (BH)', 'Llega a Barrio Hernandarias'),
