@@ -44,9 +44,9 @@ class BusStop(db.Model):
         query.order('time')
         count = query.count()
         # Try again if there are any time.
-        if count == 0:
-            # FIXME: this could be dangerous (infinite recursion)
-            return self.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES + 30, direction)
+        # if count == 0:
+        #     # FIXME: this could be dangerous (infinite recursion)
+        #     return self.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES + 30, direction)
         results = query.fetch(count)
         return results
 
