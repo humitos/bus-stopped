@@ -8,7 +8,7 @@ def now_time():
     return now_1970
 
 def get_weekday_display():
-    weekday = datetime.date.today().weekday()
+    weekday = datetime.datetime.now(pytz.timezone('America/Argentina/Buenos_Aires')).date().weekday()
     # Testing
     # weekday = 6
     if weekday == 5:
