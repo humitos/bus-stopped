@@ -20,7 +20,7 @@ class NewsLoader(bulkloader.Loader):
     def __init__(self):
         bulkloader.Loader.__init__(self, 'News',
                                    [('date', get_date),
-                                    ('title', str),
+                                    ('title', get_string),
                                     ('text', get_string),
                                     ])
 
