@@ -10,8 +10,8 @@ listadas.
 
  * ¿Qué tecnologías usa el sitio?
 
-El sitio está hecho con Google App Engine y su framework integrado
-"webapp" utilizando la API V3 de Google Maps. El Layout y CSS del
+El sitio está hecho con Google App Engine y el framework
+"TipFy" utilizando la API V3 de Google Maps. El Layout y CSS del
 sitio lo descargue de Free CSS
 
 
