@@ -1,40 +1,40 @@
 BusStop Name (ignored),BusStop ID,Line,Days,Time,Comment,Direction
-Barrio Santa Lucía,36,10,Domingos,6:57:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,6:57:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,8:19:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,9:40:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,11:01:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,12:22:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,13:43:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,15:04:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,16:25:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,17:46:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,19:07:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,20:28:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,21:49:00,,Vuelta
+Barrio A.S.S.V.E.R.,24,10,Domingos,23:10:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,07:47:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,8:19:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,08:44:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,09:11:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,9:40:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,10:05:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,10:32:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,11:01:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,11:26:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,11:53:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,12:22:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,12:47:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,13:14:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,13:43:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,14:08:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,14:35:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,15:04:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,15:29:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,15:56:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,16:25:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,16:50:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,17:17:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,17:46:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,18:11:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,18:38:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,19:07:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,19:32:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,19:59:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,20:28:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,20:53:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,21:20:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,21:49:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,22:14:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,22:41:00,,Vuelta
-Barrio Santa Lucía,36,10,Domingos,23:10:00,Llega hasta Barrio A.S.S.V.E.R.,Vuelta
 Barrio Santa Lucía,36,10,Domingos,23:41:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,00:05:00,,Vuelta
 Barrio Santa Lucía,36,10,Domingos,00:36:00,,Vuelta
@@ -155,41 +155,22 @@ Alvear,41,10,Domingos,22:48:00,,Vuelta
 Alvear,41,10,Domingos,23:21:00,,Vuelta
 Alvear,41,10,Domingos,23:47:00,,Vuelta
 Alvear,41,10,Domingos,00:19:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,07:12:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,08:08:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,09:02:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,09:56:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,10:50:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,11:44:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,12:38:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,13:32:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,14:26:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,15:20:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,16:14:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,17:08:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,18:02:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,18:56:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,19:50:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,20:44:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,21:38:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,22:32:00,,Vuelta
-Barrio Hernandarias,31,10,Domingos,23:35:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,07:18:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,08:14:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,09:08:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,10:02:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,10:56:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,11:50:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,12:44:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,13:38:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,14:32:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,15:26:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,16:20:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,17:14:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,18:08:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,19:02:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,19:56:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,20:50:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,21:44:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,22:38:00,,Vuelta
-Antonio Crespo y Av. Ramirez,20,10,Domingos,23:41:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,07:12:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,08:08:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,09:02:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,09:56:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,10:50:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,11:44:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,12:38:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,13:32:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,14:26:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,15:20:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,16:14:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,17:08:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,18:02:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,18:56:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,19:50:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,20:44:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,21:38:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,22:32:00,,Vuelta
+Barrio Hernandarias,21,10,Domingos,23:35:00,,Vuelta

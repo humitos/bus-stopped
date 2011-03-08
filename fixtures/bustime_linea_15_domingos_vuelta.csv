@@ -1,25 +1,47 @@
 BusStop Name (ignored),BusStop ID,Line,Days,Time,Comment,Direction
-Facultad de Informática,54,15,Domingos,06:16:00,6:20 (3),Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,6:20:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,7:50:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,9:20:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,10:50:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,12:20:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,13:50:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,15:20:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,16:50:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,18:20:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,19:50:00,,Vuelta
+"(3) a Esc. Alberdi
+",53,15,Domingos,21:20:00,,Vuelta
+Facultad de Informática,54,15,Domingos,06:16:00,,Vuelta
 Facultad de Informática,54,15,Domingos,06:57:00,,Vuelta
-Facultad de Informática,54,15,Domingos,07:46:00,7:50 (3),Vuelta
+Facultad de Informática,54,15,Domingos,07:46:00,,Vuelta
 Facultad de Informática,54,15,Domingos,08:31:00,,Vuelta
-Facultad de Informática,54,15,Domingos,09:16:00,9:20 (3),Vuelta
+Facultad de Informática,54,15,Domingos,09:16:00,,Vuelta
 Facultad de Informática,54,15,Domingos,10:01:00,,Vuelta
-Facultad de Informática,54,15,Domingos,10:46:00,10:50 (3),Vuelta
+Facultad de Informática,54,15,Domingos,10:46:00,,Vuelta
 Facultad de Informática,54,15,Domingos,11:31:00,,Vuelta
-Facultad de Informática,54,15,Domingos,12:16:00,12:20 (3),Vuelta
+Facultad de Informática,54,15,Domingos,12:16:00,,Vuelta
 Facultad de Informática,54,15,Domingos,13:01:00,,Vuelta
-Facultad de Informática,54,15,Domingos,13:46:00,13:50 (3),Vuelta
+Facultad de Informática,54,15,Domingos,13:46:00,,Vuelta
 Facultad de Informática,54,15,Domingos,14:31:00,,Vuelta
-Facultad de Informática,54,15,Domingos,15:16:00,15:20 (3),Vuelta
+Facultad de Informática,54,15,Domingos,15:16:00,,Vuelta
 Facultad de Informática,54,15,Domingos,16:01:00,,Vuelta
-Facultad de Informática,54,15,Domingos,16:46:00,16:50 (3),Vuelta
+Facultad de Informática,54,15,Domingos,16:46:00,,Vuelta
 Facultad de Informática,54,15,Domingos,17:31:00,,Vuelta
-Facultad de Informática,54,15,Domingos,18:16:00,18:20 (3),Vuelta
+Facultad de Informática,54,15,Domingos,18:16:00,,Vuelta
 Facultad de Informática,54,15,Domingos,19:01:00,,Vuelta
-Facultad de Informática,54,15,Domingos,19:46:00,19:50 (3),Vuelta
+Facultad de Informática,54,15,Domingos,19:46:00,,Vuelta
 Facultad de Informática,54,15,Domingos,20:31:00,,Vuelta
-Facultad de Informática,54,15,Domingos,21:16:00,21:20 (3),Vuelta
+Facultad de Informática,54,15,Domingos,21:16:00,,Vuelta
 Facultad de Informática,54,15,Domingos,21:47:00,,Vuelta
 (4) a Est. I.N.T.A.,57,15,Domingos,7:01:00,,Vuelta
 (4) a Est. I.N.T.A.,57,15,Domingos,8:35:00,,Vuelta
@@ -32,26 +54,26 @@ Facultad de Informática,54,15,Domingos,21:47:00,,Vuelta
 (4) a Est. I.N.T.A.,57,15,Domingos,19:05:00,,Vuelta
 (4) a Est. I.N.T.A.,57,15,Domingos,20:35:00,,Vuelta
 (4) a Est. I.N.T.A.,57,15,Domingos,21:51:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,05:50:00,6:20 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,05:50:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,06:31:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,07:20:00,7:50 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,07:20:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,08:03:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,08:48:00,9:20 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,08:48:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,09:33:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,10:18:00,10:50 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,10:18:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,11:03:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,11:48:00,12:20 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,11:48:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,12:33:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,13:18:00,13:50 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,13:18:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,14:03:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,14:48:00,15:20 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,14:48:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,15:33:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,16:18:00,16:50 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,16:18:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,17:03:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,17:48:00,18:20 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,17:48:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,18:33:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,19:18:00,19:50 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,19:18:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,20:03:00,,Vuelta
-Plaza Alberdi,58,15,Domingos,20:48:00,21:20 (3),Vuelta
+Plaza Alberdi,58,15,Domingos,20:48:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,21:22:00,,Vuelta
 Plaza Alberdi,58,15,Domingos,22:07:00,,Vuelta

@@ -1,78 +1,100 @@
 BusStop Name (ignored),BusStop ID,Line,Days,Time,Comment,Direction
 "(1) de Esc. Alberdi
-",53,15,Domingos,6:35:00,"07:12:00,",Ida
+",53,15,Domingos,6:35:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,8:05:00,"08:42:00,",Ida
+",53,15,Domingos,8:05:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,9:35:00,"10:12:00,",Ida
+",53,15,Domingos,9:35:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,11:05:00,"11:42:00,",Ida
+",53,15,Domingos,11:05:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,12:35:00,"13:12:00,",Ida
+",53,15,Domingos,12:35:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,14:05:00,"14:42:00,",Ida
+",53,15,Domingos,14:05:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,15:35:00,"16:12:00,",Ida
+",53,15,Domingos,15:35:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,17:05:00,"17:42:00,",Ida
+",53,15,Domingos,17:05:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,18:35:00,"19:12:00,",Ida
+",53,15,Domingos,18:35:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,20:05:00,"20:42:00,",Ida
+",53,15,Domingos,20:05:00,,Ida
 "(1) de Esc. Alberdi
-",53,15,Domingos,21:30:00,"22:04:00,",Ida
-Facultad de Informática,54,15,Domingos,05:54:00,06:24:00,Ida
-Facultad de Informática,54,15,Domingos,06:39:00,07:12:00,Ida
-Facultad de Informática,54,15,Domingos,07:24:00,07:57:00,Ida
-Facultad de Informática,54,15,Domingos,08:09:00,08:42:00,Ida
-Facultad de Informática,54,15,Domingos,08:54:00,09:27:00,Ida
-Facultad de Informática,54,15,Domingos,09:39:00,10:12:00,Ida
-Facultad de Informática,54,15,Domingos,10:24:00,10:57:00,Ida
-Facultad de Informática,54,15,Domingos,11:09:00,11:42:00,Ida
-Facultad de Informática,54,15,Domingos,11:54:00,12:27:00,Ida
-Facultad de Informática,54,15,Domingos,12:39:00,13:12:00,Ida
-Facultad de Informática,54,15,Domingos,13:24:00,13:57:00,Ida
-Facultad de Informática,54,15,Domingos,14:09:00,14:42:00,Ida
-Facultad de Informática,54,15,Domingos,14:54:00,15:27:00,Ida
-Facultad de Informática,54,15,Domingos,15:39:00,16:12:00,Ida
-Facultad de Informática,54,15,Domingos,16:24:00,16:57:00,Ida
-Facultad de Informática,54,15,Domingos,17:09:00,17:42:00,Ida
-Facultad de Informática,54,15,Domingos,17:54:00,18:27:00,Ida
-Facultad de Informática,54,15,Domingos,18:39:00,19:12:00,Ida
-Facultad de Informática,54,15,Domingos,19:24:00,19:57:00,Ida
-Facultad de Informática,54,15,Domingos,20:09:00,20:42:00,Ida
-Facultad de Informática,54,15,Domingos,20:48:00,21:19:00,Ida
-Facultad de Informática,54,15,Domingos,21:33:00,22:04:00,Ida
-Terminal de Omnibus,55,15,Domingos,06:18:00,06:24:00,Ida
-Terminal de Omnibus,55,15,Domingos,07:06:00,07:12:00,Ida
-Terminal de Omnibus,55,15,Domingos,07:51:00,07:57:00,Ida
-Terminal de Omnibus,55,15,Domingos,08:36:00,08:42:00,Ida
-Terminal de Omnibus,55,15,Domingos,09:21:00,09:27:00,Ida
-Terminal de Omnibus,55,15,Domingos,10:06:00,10:12:00,Ida
-Terminal de Omnibus,55,15,Domingos,10:51:00,10:57:00,Ida
-Terminal de Omnibus,55,15,Domingos,11:36:00,11:42:00,Ida
-Terminal de Omnibus,55,15,Domingos,12:21:00,12:27:00,Ida
-Terminal de Omnibus,55,15,Domingos,13:06:00,13:12:00,Ida
-Terminal de Omnibus,55,15,Domingos,13:51:00,13:57:00,Ida
-Terminal de Omnibus,55,15,Domingos,14:36:00,14:42:00,Ida
-Terminal de Omnibus,55,15,Domingos,15:21:00,15:27:00,Ida
-Terminal de Omnibus,55,15,Domingos,16:06:00,16:12:00,Ida
-Terminal de Omnibus,55,15,Domingos,16:51:00,16:57:00,Ida
-Terminal de Omnibus,55,15,Domingos,17:36:00,17:42:00,Ida
-Terminal de Omnibus,55,15,Domingos,18:21:00,18:27:00,Ida
-Terminal de Omnibus,55,15,Domingos,19:06:00,19:12:00,Ida
-Terminal de Omnibus,55,15,Domingos,19:51:00,19:57:00,Ida
-Terminal de Omnibus,55,15,Domingos,20:36:00,20:42:00,Ida
-Terminal de Omnibus,55,15,Domingos,21:13:00,21:19:00,Ida
-Terminal de Omnibus,55,15,Domingos,21:58:00,22:04:00,Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,5:50:00,"06:24:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,7:20:00,"07:57:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,8:50:00,"09:27:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,10:20:00,"10:57:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,11:50:00,"12:27:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,13:20:00,"13:57:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,14:50:00,"15:27:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,16:20:00,"16:57:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,17:50:00,"18:27:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,19:20:00,"19:57:00,",Ida
-(2) de Est. I.N.T.A.,57,15,Domingos,20:45:00,"21:19:00,",Ida
+",53,15,Domingos,21:30:00,,Ida
+Facultad de Informática,54,15,Domingos,05:54:00,,Ida
+Facultad de Informática,54,15,Domingos,06:39:00,,Ida
+Facultad de Informática,54,15,Domingos,07:24:00,,Ida
+Facultad de Informática,54,15,Domingos,08:09:00,,Ida
+Facultad de Informática,54,15,Domingos,08:54:00,,Ida
+Facultad de Informática,54,15,Domingos,09:39:00,,Ida
+Facultad de Informática,54,15,Domingos,10:24:00,,Ida
+Facultad de Informática,54,15,Domingos,11:09:00,,Ida
+Facultad de Informática,54,15,Domingos,11:54:00,,Ida
+Facultad de Informática,54,15,Domingos,12:39:00,,Ida
+Facultad de Informática,54,15,Domingos,13:24:00,,Ida
+Facultad de Informática,54,15,Domingos,14:09:00,,Ida
+Facultad de Informática,54,15,Domingos,14:54:00,,Ida
+Facultad de Informática,54,15,Domingos,15:39:00,,Ida
+Facultad de Informática,54,15,Domingos,16:24:00,,Ida
+Facultad de Informática,54,15,Domingos,17:09:00,,Ida
+Facultad de Informática,54,15,Domingos,17:54:00,,Ida
+Facultad de Informática,54,15,Domingos,18:39:00,,Ida
+Facultad de Informática,54,15,Domingos,19:24:00,,Ida
+Facultad de Informática,54,15,Domingos,20:09:00,,Ida
+Facultad de Informática,54,15,Domingos,20:48:00,,Ida
+Facultad de Informática,54,15,Domingos,21:33:00,,Ida
+Terminal de Omnibus,55,15,Domingos,06:18:00,,Ida
+Terminal de Omnibus,55,15,Domingos,07:06:00,,Ida
+Terminal de Omnibus,55,15,Domingos,07:51:00,,Ida
+Terminal de Omnibus,55,15,Domingos,08:36:00,,Ida
+Terminal de Omnibus,55,15,Domingos,09:21:00,,Ida
+Terminal de Omnibus,55,15,Domingos,10:06:00,,Ida
+Terminal de Omnibus,55,15,Domingos,10:51:00,,Ida
+Terminal de Omnibus,55,15,Domingos,11:36:00,,Ida
+Terminal de Omnibus,55,15,Domingos,12:21:00,,Ida
+Terminal de Omnibus,55,15,Domingos,13:06:00,,Ida
+Terminal de Omnibus,55,15,Domingos,13:51:00,,Ida
+Terminal de Omnibus,55,15,Domingos,14:36:00,,Ida
+Terminal de Omnibus,55,15,Domingos,15:21:00,,Ida
+Terminal de Omnibus,55,15,Domingos,16:06:00,,Ida
+Terminal de Omnibus,55,15,Domingos,16:51:00,,Ida
+Terminal de Omnibus,55,15,Domingos,17:36:00,,Ida
+Terminal de Omnibus,55,15,Domingos,18:21:00,,Ida
+Terminal de Omnibus,55,15,Domingos,19:06:00,,Ida
+Terminal de Omnibus,55,15,Domingos,19:51:00,,Ida
+Terminal de Omnibus,55,15,Domingos,20:36:00,,Ida
+Terminal de Omnibus,55,15,Domingos,21:13:00,,Ida
+Terminal de Omnibus,55,15,Domingos,21:58:00,,Ida
+Hospital de Niños,56,15,Domingos,06:24:00,,Ida
+Hospital de Niños,56,15,Domingos,07:12:00,,Ida
+Hospital de Niños,56,15,Domingos,07:57:00,,Ida
+Hospital de Niños,56,15,Domingos,08:42:00,,Ida
+Hospital de Niños,56,15,Domingos,09:27:00,,Ida
+Hospital de Niños,56,15,Domingos,10:12:00,,Ida
+Hospital de Niños,56,15,Domingos,10:57:00,,Ida
+Hospital de Niños,56,15,Domingos,11:42:00,,Ida
+Hospital de Niños,56,15,Domingos,12:27:00,,Ida
+Hospital de Niños,56,15,Domingos,13:12:00,,Ida
+Hospital de Niños,56,15,Domingos,13:57:00,,Ida
+Hospital de Niños,56,15,Domingos,14:42:00,,Ida
+Hospital de Niños,56,15,Domingos,15:27:00,,Ida
+Hospital de Niños,56,15,Domingos,16:12:00,,Ida
+Hospital de Niños,56,15,Domingos,16:57:00,,Ida
+Hospital de Niños,56,15,Domingos,17:42:00,,Ida
+Hospital de Niños,56,15,Domingos,18:27:00,,Ida
+Hospital de Niños,56,15,Domingos,19:12:00,,Ida
+Hospital de Niños,56,15,Domingos,19:57:00,,Ida
+Hospital de Niños,56,15,Domingos,20:42:00,,Ida
+Hospital de Niños,56,15,Domingos,21:19:00,,Ida
+Hospital de Niños,56,15,Domingos,22:04:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,5:50:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,7:20:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,8:50:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,10:20:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,11:50:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,13:20:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,14:50:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,16:20:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,17:50:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,19:20:00,,Ida
+(2) de Est. I.N.T.A.,57,15,Domingos,20:45:00,,Ida
