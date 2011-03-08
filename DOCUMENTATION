@@ -1,0 +1,10 @@
+Para utilizar la Consola Interactiva de "/admin/interactive" se debe a
+agregar esta porción de código al inicio del script.
+
+import sys
+sys.path[0:0] = ['lib', 'distlib', 'distlib.zip']
+from google.appengine.ext import db
+
+from apps.busstopped.models import BusTime
+from apps.busstopped.utils import now_time
+
