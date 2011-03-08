@@ -27,6 +27,12 @@ indexes:
 
 - kind: BusTime
   properties:
+  - name: bus_line
+  - name: days
+  - name: time
+
+- kind: BusTime
+  properties:
   - name: bus_stop
   - name: days
   - name: direction

@@ -74,6 +74,12 @@ class BusDirection(db.Model):
     to_direction = db.StringProperty(required=True)
 
 
+class BusPath(db.Model):
+    bus_line = db.StringProperty(required=True)
+    direction = db.StringProperty(choices=set(['Ida', 'Vuelta']))
+    filename = db.StringProperty(required=True)
+
+
 class News(db.Model):
     date = db.DateProperty(required=True)
     text = db.TextProperty(required=True)
