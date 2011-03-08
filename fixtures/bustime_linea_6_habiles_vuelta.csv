@@ -1,406 +1,325 @@
 BusStop Name (ignored),BusStop ID,Line,Days,Time,Comment,Direction
-ORO VERDE,1,6,Habiles,05:50:00,,Vuelta
-ORO VERDE,1,6,Habiles,06:12:00,,Vuelta
+ORO VERDE,1,6,Habiles,05:50:00, ,Vuelta
+ORO VERDE,1,6,Habiles,06:12:00, ,Vuelta
 ORO VERDE,1,6,Habiles,06:34:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,06:56:00,,Vuelta
+ORO VERDE,1,6,Habiles,06:56:00, ,Vuelta
 ORO VERDE,1,6,Habiles,07:11:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,07:19:00,,Vuelta
+ORO VERDE,1,6,Habiles,07:19:00, ,Vuelta
 ORO VERDE,1,6,Habiles,07:34:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,07:47:00,,Vuelta
+ORO VERDE,1,6,Habiles,07:47:00, ,Vuelta
 ORO VERDE,1,6,Habiles,07:58:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,08:13:00,,Vuelta
+ORO VERDE,1,6,Habiles,08:13:00, ,Vuelta
 ORO VERDE,1,6,Habiles,08:26:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,08:38:00,,Vuelta
+ORO VERDE,1,6,Habiles,08:38:00, ,Vuelta
 ORO VERDE,1,6,Habiles,08:50:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,09:02:00,,Vuelta
+ORO VERDE,1,6,Habiles,09:02:00, ,Vuelta
 ORO VERDE,1,6,Habiles,09:13:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,09:25:00,,Vuelta
+ORO VERDE,1,6,Habiles,09:25:00, ,Vuelta
 ORO VERDE,1,6,Habiles,09:37:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,09:49:00,,Vuelta
+ORO VERDE,1,6,Habiles,09:49:00, ,Vuelta
 ORO VERDE,1,6,Habiles,10:01:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,10:13:00,,Vuelta
+ORO VERDE,1,6,Habiles,10:13:00, ,Vuelta
 ORO VERDE,1,6,Habiles,10:24:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,10:36:00,,Vuelta
+ORO VERDE,1,6,Habiles,10:36:00, ,Vuelta
 ORO VERDE,1,6,Habiles,10:48:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,11:00:00,,Vuelta
+ORO VERDE,1,6,Habiles,11:00:00, ,Vuelta
 ORO VERDE,1,6,Habiles,11:12:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,11:23:00,,Vuelta
+ORO VERDE,1,6,Habiles,11:23:00, ,Vuelta
 ORO VERDE,1,6,Habiles,11:35:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,11:47:00,,Vuelta
+ORO VERDE,1,6,Habiles,11:47:00, ,Vuelta
 ORO VERDE,1,6,Habiles,11:59:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,12:11:00,,Vuelta
+ORO VERDE,1,6,Habiles,12:11:00, ,Vuelta
 ORO VERDE,1,6,Habiles,12:22:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,12:34:00,,Vuelta
+ORO VERDE,1,6,Habiles,12:34:00, ,Vuelta
 ORO VERDE,1,6,Habiles,12:46:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,12:58:00,,Vuelta
+ORO VERDE,1,6,Habiles,12:58:00, ,Vuelta
 ORO VERDE,1,6,Habiles,13:10:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,13:21:00,,Vuelta
+ORO VERDE,1,6,Habiles,13:21:00, ,Vuelta
 ORO VERDE,1,6,Habiles,13:33:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,13:45:00,,Vuelta
+ORO VERDE,1,6,Habiles,13:45:00, ,Vuelta
 ORO VERDE,1,6,Habiles,13:57:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,14:07:00,,Vuelta
+ORO VERDE,1,6,Habiles,14:07:00, ,Vuelta
 ORO VERDE,1,6,Habiles,14:15:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,14:27:00,,Vuelta
+ORO VERDE,1,6,Habiles,14:27:00, ,Vuelta
 ORO VERDE,1,6,Habiles,14:43:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,14:59:00,,Vuelta
+ORO VERDE,1,6,Habiles,14:59:00, ,Vuelta
 ORO VERDE,1,6,Habiles,15:15:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,15:31:00,,Vuelta
+ORO VERDE,1,6,Habiles,15:31:00, ,Vuelta
 ORO VERDE,1,6,Habiles,15:47:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,16:03:00,,Vuelta
+ORO VERDE,1,6,Habiles,16:03:00, ,Vuelta
 ORO VERDE,1,6,Habiles,16:19:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,16:38:00,,Vuelta
+ORO VERDE,1,6,Habiles,16:38:00, ,Vuelta
 ORO VERDE,1,6,Habiles,16:56:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,17:12:00,,Vuelta
+ORO VERDE,1,6,Habiles,17:12:00, ,Vuelta
 ORO VERDE,1,6,Habiles,17:27:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,17:42:00,,Vuelta
+ORO VERDE,1,6,Habiles,17:42:00, ,Vuelta
 ORO VERDE,1,6,Habiles,17:54:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,18:06:00,,Vuelta
+ORO VERDE,1,6,Habiles,18:06:00, ,Vuelta
 ORO VERDE,1,6,Habiles,18:18:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,18:29:00,,Vuelta
+ORO VERDE,1,6,Habiles,18:29:00, ,Vuelta
 ORO VERDE,1,6,Habiles,18:41:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,18:53:00,,Vuelta
+ORO VERDE,1,6,Habiles,18:53:00, ,Vuelta
 ORO VERDE,1,6,Habiles,19:05:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,19:17:00,,Vuelta
+ORO VERDE,1,6,Habiles,19:17:00, ,Vuelta
 ORO VERDE,1,6,Habiles,19:28:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,19:40:00,,Vuelta
+ORO VERDE,1,6,Habiles,19:40:00, ,Vuelta
 ORO VERDE,1,6,Habiles,19:52:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,20:04:00,,Vuelta
+ORO VERDE,1,6,Habiles,20:04:00, ,Vuelta
 ORO VERDE,1,6,Habiles,20:16:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,20:27:00,,Vuelta
+ORO VERDE,1,6,Habiles,20:27:00, ,Vuelta
 ORO VERDE,1,6,Habiles,20:39:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,20:51:00,,Vuelta
+ORO VERDE,1,6,Habiles,20:51:00, ,Vuelta
 ORO VERDE,1,6,Habiles,21:00:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,21:12:00,,Vuelta
+ORO VERDE,1,6,Habiles,21:12:00, ,Vuelta
 ORO VERDE,1,6,Habiles,21:23:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,21:35:00,,Vuelta
+ORO VERDE,1,6,Habiles,21:35:00, ,Vuelta
 ORO VERDE,1,6,Habiles,21:55:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,22:14:00,,Vuelta
+ORO VERDE,1,6,Habiles,22:14:00, ,Vuelta
 ORO VERDE,1,6,Habiles,22:38:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,23:01:00,,Vuelta
+ORO VERDE,1,6,Habiles,23:01:00, ,Vuelta
 ORO VERDE,1,6,Habiles,23:28:00,por PARACAO,Vuelta
-ORO VERDE,1,6,Habiles,23:53:00,,Vuelta
+ORO VERDE,1,6,Habiles,23:53:00, ,Vuelta
 ORO VERDE,1,6,Habiles,00:25:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,05:43:00,,Vuelta
-Km. 5 1/2,2,6,Habiles,06:05:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,05:43:00, ,Vuelta
+Km. 5 1/2,2,6,Habiles,06:05:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,06:27:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,06:49:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,06:49:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,07:04:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,07:12:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,07:12:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,07:27:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,07:40:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,07:40:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,07:51:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,08:06:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,08:06:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,08:19:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,08:31:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,08:31:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,08:43:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,08:55:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,08:55:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,09:06:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,09:18:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,09:18:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,09:30:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,09:42:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,09:42:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,09:54:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,10:06:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,10:06:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,10:17:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,10:29:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,10:29:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,10:41:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,10:53:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,10:53:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,11:05:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,11:16:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,11:16:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,11:28:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,11:40:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,11:40:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,11:52:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,12:04:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,12:04:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,12:15:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,12:27:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,12:27:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,12:39:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,12:51:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,12:51:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,13:03:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,13:14:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,13:14:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,13:26:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,13:38:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,13:38:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,13:50:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,14:00:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,14:00:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,14:08:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,14:20:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,14:20:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,14:36:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,14:52:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,14:52:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,15:08:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,15:24:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,15:24:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,15:40:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,15:56:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,15:56:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,16:12:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,16:31:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,16:31:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,16:49:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,17:05:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,17:05:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,17:20:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,17:35:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,17:35:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,17:47:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,17:59:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,17:59:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,18:11:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,18:22:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,18:22:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,18:34:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,18:46:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,18:46:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,18:58:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,19:10:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,19:10:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,19:21:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,19:33:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,19:33:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,19:45:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,19:57:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,19:57:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,20:09:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,20:20:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,20:20:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,20:32:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,20:44:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,20:44:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,20:53:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,21:05:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,21:05:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,21:16:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,21:28:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,21:28:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,21:48:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,22:07:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,22:07:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,22:31:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,22:54:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,22:54:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,23:21:00,por PARACAO,Vuelta
-Km. 5 1/2,2,6,Habiles,23:46:00,,Vuelta
+Km. 5 1/2,2,6,Habiles,23:46:00, ,Vuelta
 Km. 5 1/2,2,6,Habiles,00:18:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,05:20:00,,Vuelta
-Alvear,7,6,Habiles,05:41:00,,Vuelta
+Alvear,7,6,Habiles,05:20:00, ,Vuelta
+Alvear,7,6,Habiles,05:41:00, ,Vuelta
 Alvear,7,6,Habiles,06:01:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,06:22:00,,Vuelta
+Alvear,7,6,Habiles,06:22:00, ,Vuelta
 Alvear,7,6,Habiles,06:36:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,06:44:00,,Vuelta
+Alvear,7,6,Habiles,06:44:00, ,Vuelta
 Alvear,7,6,Habiles,06:56:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,07:09:00,,Vuelta
+Alvear,7,6,Habiles,07:09:00, ,Vuelta
 Alvear,7,6,Habiles,07:20:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,07:35:00,,Vuelta
+Alvear,7,6,Habiles,07:35:00, ,Vuelta
 Alvear,7,6,Habiles,07:48:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,08:00:00,,Vuelta
+Alvear,7,6,Habiles,08:00:00, ,Vuelta
 Alvear,7,6,Habiles,08:12:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,08:24:00,,Vuelta
+Alvear,7,6,Habiles,08:24:00, ,Vuelta
 Alvear,7,6,Habiles,08:35:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,08:47:00,,Vuelta
+Alvear,7,6,Habiles,08:47:00, ,Vuelta
 Alvear,7,6,Habiles,08:59:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,09:11:00,,Vuelta
+Alvear,7,6,Habiles,09:11:00, ,Vuelta
 Alvear,7,6,Habiles,09:23:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,09:35:00,,Vuelta
+Alvear,7,6,Habiles,09:35:00, ,Vuelta
 Alvear,7,6,Habiles,09:46:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,09:58:00,,Vuelta
+Alvear,7,6,Habiles,09:58:00, ,Vuelta
 Alvear,7,6,Habiles,10:10:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,10:22:00,,Vuelta
+Alvear,7,6,Habiles,10:22:00, ,Vuelta
 Alvear,7,6,Habiles,10:34:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,10:45:00,,Vuelta
+Alvear,7,6,Habiles,10:45:00, ,Vuelta
 Alvear,7,6,Habiles,10:57:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,11:09:00,,Vuelta
+Alvear,7,6,Habiles,11:09:00, ,Vuelta
 Alvear,7,6,Habiles,11:21:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,11:33:00,,Vuelta
+Alvear,7,6,Habiles,11:33:00, ,Vuelta
 Alvear,7,6,Habiles,11:44:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,11:56:00,,Vuelta
+Alvear,7,6,Habiles,11:56:00, ,Vuelta
 Alvear,7,6,Habiles,12:08:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,12:20:00,,Vuelta
+Alvear,7,6,Habiles,12:20:00, ,Vuelta
 Alvear,7,6,Habiles,12:32:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,12:43:00,,Vuelta
+Alvear,7,6,Habiles,12:43:00, ,Vuelta
 Alvear,7,6,Habiles,12:55:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,13:07:00,,Vuelta
+Alvear,7,6,Habiles,13:07:00, ,Vuelta
 Alvear,7,6,Habiles,13:19:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,13:31:00,,Vuelta
+Alvear,7,6,Habiles,13:31:00, ,Vuelta
 Alvear,7,6,Habiles,13:39:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,13:51:00,,Vuelta
+Alvear,7,6,Habiles,13:51:00, ,Vuelta
 Alvear,7,6,Habiles,14:07:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,14:23:00,,Vuelta
+Alvear,7,6,Habiles,14:23:00, ,Vuelta
 Alvear,7,6,Habiles,14:39:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,14:55:00,,Vuelta
+Alvear,7,6,Habiles,14:55:00, ,Vuelta
 Alvear,7,6,Habiles,15:11:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,15:27:00,,Vuelta
+Alvear,7,6,Habiles,15:27:00, ,Vuelta
 Alvear,7,6,Habiles,15:43:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,16:02:00,,Vuelta
+Alvear,7,6,Habiles,16:02:00, ,Vuelta
 Alvear,7,6,Habiles,16:18:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,16:34:00,,Vuelta
+Alvear,7,6,Habiles,16:34:00, ,Vuelta
 Alvear,7,6,Habiles,16:49:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,17:04:00,,Vuelta
+Alvear,7,6,Habiles,17:04:00, ,Vuelta
 Alvear,7,6,Habiles,17:16:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,17:28:00,,Vuelta
+Alvear,7,6,Habiles,17:28:00, ,Vuelta
 Alvear,7,6,Habiles,17:40:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,17:51:00,,Vuelta
+Alvear,7,6,Habiles,17:51:00, ,Vuelta
 Alvear,7,6,Habiles,18:03:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,18:15:00,,Vuelta
+Alvear,7,6,Habiles,18:15:00, ,Vuelta
 Alvear,7,6,Habiles,18:27:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,18:39:00,,Vuelta
+Alvear,7,6,Habiles,18:39:00, ,Vuelta
 Alvear,7,6,Habiles,18:50:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,19:02:00,,Vuelta
+Alvear,7,6,Habiles,19:02:00, ,Vuelta
 Alvear,7,6,Habiles,19:14:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,19:26:00,,Vuelta
+Alvear,7,6,Habiles,19:26:00, ,Vuelta
 Alvear,7,6,Habiles,19:38:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,19:49:00,,Vuelta
+Alvear,7,6,Habiles,19:49:00, ,Vuelta
 Alvear,7,6,Habiles,20:01:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,20:13:00,,Vuelta
+Alvear,7,6,Habiles,20:13:00, ,Vuelta
 Alvear,7,6,Habiles,20:24:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,20:36:00,,Vuelta
+Alvear,7,6,Habiles,20:36:00, ,Vuelta
 Alvear,7,6,Habiles,20:47:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,20:59:00,,Vuelta
+Alvear,7,6,Habiles,20:59:00, ,Vuelta
 Alvear,7,6,Habiles,21:19:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,21:37:00,,Vuelta
+Alvear,7,6,Habiles,21:37:00, ,Vuelta
 Alvear,7,6,Habiles,22:01:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,22:27:00,,Vuelta
+Alvear,7,6,Habiles,22:27:00, ,Vuelta
 Alvear,7,6,Habiles,22:53:00,por PARACAO,Vuelta
-Alvear,7,6,Habiles,23:23:00,,Vuelta
+Alvear,7,6,Habiles,23:23:00, ,Vuelta
 Alvear,7,6,Habiles,23:55:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,05:26:00,,Vuelta
-Alberdi,8,6,Habiles,05:47:00,,Vuelta
+Alberdi,8,6,Habiles,05:26:00, ,Vuelta
+Alberdi,8,6,Habiles,05:47:00, ,Vuelta
 Alberdi,8,6,Habiles,06:09:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,06:30:00,,Vuelta
+Alberdi,8,6,Habiles,06:30:00, ,Vuelta
 Alberdi,8,6,Habiles,06:44:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,06:52:00,,Vuelta
+Alberdi,8,6,Habiles,06:52:00, ,Vuelta
 Alberdi,8,6,Habiles,07:05:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,07:18:00,,Vuelta
+Alberdi,8,6,Habiles,07:18:00, ,Vuelta
 Alberdi,8,6,Habiles,07:29:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,07:44:00,,Vuelta
+Alberdi,8,6,Habiles,07:44:00, ,Vuelta
 Alberdi,8,6,Habiles,07:57:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,08:09:00,,Vuelta
+Alberdi,8,6,Habiles,08:09:00, ,Vuelta
 Alberdi,8,6,Habiles,08:21:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,08:33:00,,Vuelta
+Alberdi,8,6,Habiles,08:33:00, ,Vuelta
 Alberdi,8,6,Habiles,08:44:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,08:56:00,,Vuelta
+Alberdi,8,6,Habiles,08:56:00, ,Vuelta
 Alberdi,8,6,Habiles,09:08:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,09:20:00,,Vuelta
+Alberdi,8,6,Habiles,09:20:00, ,Vuelta
 Alberdi,8,6,Habiles,09:32:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,09:44:00,,Vuelta
+Alberdi,8,6,Habiles,09:44:00, ,Vuelta
 Alberdi,8,6,Habiles,09:55:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,10:07:00,,Vuelta
+Alberdi,8,6,Habiles,10:07:00, ,Vuelta
 Alberdi,8,6,Habiles,10:19:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,10:31:00,,Vuelta
+Alberdi,8,6,Habiles,10:31:00, ,Vuelta
 Alberdi,8,6,Habiles,10:43:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,10:54:00,,Vuelta
+Alberdi,8,6,Habiles,10:54:00, ,Vuelta
 Alberdi,8,6,Habiles,11:06:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,11:18:00,,Vuelta
+Alberdi,8,6,Habiles,11:18:00, ,Vuelta
 Alberdi,8,6,Habiles,11:30:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,11:42:00,,Vuelta
+Alberdi,8,6,Habiles,11:42:00, ,Vuelta
 Alberdi,8,6,Habiles,11:53:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,12:05:00,,Vuelta
+Alberdi,8,6,Habiles,12:05:00, ,Vuelta
 Alberdi,8,6,Habiles,12:17:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,12:29:00,,Vuelta
+Alberdi,8,6,Habiles,12:29:00, ,Vuelta
 Alberdi,8,6,Habiles,12:41:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,12:52:00,,Vuelta
+Alberdi,8,6,Habiles,12:52:00, ,Vuelta
 Alberdi,8,6,Habiles,13:04:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,13:16:00,,Vuelta
+Alberdi,8,6,Habiles,13:16:00, ,Vuelta
 Alberdi,8,6,Habiles,13:28:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,13:39:00,,Vuelta
+Alberdi,8,6,Habiles,13:39:00, ,Vuelta
 Alberdi,8,6,Habiles,13:47:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,13:59:00,,Vuelta
+Alberdi,8,6,Habiles,13:59:00, ,Vuelta
 Alberdi,8,6,Habiles,14:15:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,14:31:00,,Vuelta
+Alberdi,8,6,Habiles,14:31:00, ,Vuelta
 Alberdi,8,6,Habiles,14:47:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,15:03:00,,Vuelta
+Alberdi,8,6,Habiles,15:03:00, ,Vuelta
 Alberdi,8,6,Habiles,15:19:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,15:35:00,,Vuelta
+Alberdi,8,6,Habiles,15:35:00, ,Vuelta
 Alberdi,8,6,Habiles,15:51:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,16:10:00,,Vuelta
+Alberdi,8,6,Habiles,16:10:00, ,Vuelta
 Alberdi,8,6,Habiles,16:27:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,16:43:00,,Vuelta
+Alberdi,8,6,Habiles,16:43:00, ,Vuelta
 Alberdi,8,6,Habiles,16:58:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,17:13:00,,Vuelta
+Alberdi,8,6,Habiles,17:13:00, ,Vuelta
 Alberdi,8,6,Habiles,17:25:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,17:37:00,,Vuelta
+Alberdi,8,6,Habiles,17:37:00, ,Vuelta
 Alberdi,8,6,Habiles,17:49:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,18:00:00,,Vuelta
+Alberdi,8,6,Habiles,18:00:00, ,Vuelta
 Alberdi,8,6,Habiles,18:12:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,18:24:00,,Vuelta
+Alberdi,8,6,Habiles,18:24:00, ,Vuelta
 Alberdi,8,6,Habiles,18:36:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,18:48:00,,Vuelta
+Alberdi,8,6,Habiles,18:48:00, ,Vuelta
 Alberdi,8,6,Habiles,18:59:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,19:11:00,,Vuelta
+Alberdi,8,6,Habiles,19:11:00, ,Vuelta
 Alberdi,8,6,Habiles,19:23:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,19:35:00,,Vuelta
+Alberdi,8,6,Habiles,19:35:00, ,Vuelta
 Alberdi,8,6,Habiles,19:47:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,19:58:00,,Vuelta
+Alberdi,8,6,Habiles,19:58:00, ,Vuelta
 Alberdi,8,6,Habiles,20:10:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,20:22:00,,Vuelta
+Alberdi,8,6,Habiles,20:22:00, ,Vuelta
 Alberdi,8,6,Habiles,20:32:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,20:44:00,,Vuelta
+Alberdi,8,6,Habiles,20:44:00, ,Vuelta
 Alberdi,8,6,Habiles,20:55:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,21:07:00,,Vuelta
+Alberdi,8,6,Habiles,21:07:00, ,Vuelta
 Alberdi,8,6,Habiles,21:27:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,21:46:00,,Vuelta
+Alberdi,8,6,Habiles,21:46:00, ,Vuelta
 Alberdi,8,6,Habiles,22:10:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,22:35:00,,Vuelta
+Alberdi,8,6,Habiles,22:35:00, ,Vuelta
 Alberdi,8,6,Habiles,23:01:00,por PARACAO,Vuelta
-Alberdi,8,6,Habiles,23:29:00,,Vuelta
+Alberdi,8,6,Habiles,23:29:00, ,Vuelta
 Alberdi,8,6,Habiles,00:01:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,05:34:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,05:55:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,06:17:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,06:38:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,06:52:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,07:00:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,07:13:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,07:26:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,07:37:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,07:52:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,08:05:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,08:17:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,08:29:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,08:41:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,08:52:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,09:04:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,09:16:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,09:28:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,09:40:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,09:52:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,10:03:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,10:15:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,10:27:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,10:39:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,10:51:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,11:02:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,11:14:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,11:26:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,11:38:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,11:50:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,12:01:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,12:13:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,12:25:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,12:37:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,12:49:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,13:00:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,13:12:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,13:24:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,13:36:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,13:47:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,13:55:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,14:07:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,14:23:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,14:39:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,14:55:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,15:11:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,15:27:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,15:43:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,15:59:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,16:18:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,16:35:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,16:51:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,17:06:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,17:21:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,17:33:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,17:45:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,17:57:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,18:08:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,18:20:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,18:32:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,18:44:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,18:56:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,19:07:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,19:19:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,19:31:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,19:43:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,19:55:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,20:06:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,20:18:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,20:30:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,20:40:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,20:52:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,21:03:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,21:15:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,21:35:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,21:54:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,22:18:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,22:43:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,23:09:00,por PARACAO,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,23:37:00,,Vuelta
-Av. Americas y Bv. Racedo,6,6,Habiles,00:09:00,por PARACAO,Vuelta

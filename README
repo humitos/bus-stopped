@@ -16,23 +16,3 @@ sitio lo descargue de Free CSS
 
 
 Contacto: humitos@gmail.com
-
-
-.. code:: python
-
-import sys
-sys.path[0:0] = ['lib', 'distlib', 'distlib.zip']
-
-from apps.busstopped.models import *
-
-from google.appengine.ext import db
-
-query = db.Query(BusStop)
-print query.fetch(5)
-
-db.delete(BusStop.all())
-
-print BusStop.all()
-
-db.delete(News.all())
-print News.all()

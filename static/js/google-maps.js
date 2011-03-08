@@ -179,17 +179,16 @@ function getNearBusStop(){
               });
 }
 
-function showPath(line, direction){
-    // var line = $('select[name=path-line] option:selected').val();
-    // var direction = $('select[name=path-direction] option:selected').val();
+function KmlLayer(){
+    var line = $('select[name=path-line] option:selected').val();
+    var direction = $('select[name=path-direction] option:selected').val();
     // This .kml MUST be in public domain
     var url = window.location.href;
     // FIXME: Just for DEBUG
-    if(url.indexOf('localhost') >= 0 || url.indexOf('humitos.homelinux.net') >= 0){
+    if(url.indexOf('localhost') >= 0){
 	url = 'http://humitos.homelinux.net:8007';
     }
-    // url += MEDIA_URL + 'kml/' + direction + '_linea_' + line + '.kmz';
-    url += MEDIA_URL + 'kml/linea_' + line + '_' + direction + '.kmz';
+    url += MEDIA_URL + 'kml/' + direction + '_linea_' + line + '.kmz';
 
     // $.each(layers, function(i, layer){
     // 	       layer.setMap(null);
