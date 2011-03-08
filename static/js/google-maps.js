@@ -51,9 +51,7 @@ function loadBusStop(line, direction) {
                                      shape: shape,
                                      title: point.name,
                                      zIndex: 1,
-                                     key: point.key,
-				     address: point.address,
-				     directions: point.directions
+                                     key: point.key
                                  });
 			     markers.push(marker);
 
