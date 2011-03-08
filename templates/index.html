@@ -13,11 +13,19 @@ function loadBusEvent(){
     var line = $("select[id=lines] option:selected").val();
     var direction = $("select[id=direction] option:selected").val();
     loadBusStop(line, direction);
+    showPath(line, direction);
+}
+
+function showPathEvent(){
+    var line = $("select[id=lines] option:selected").val();
+    var direction = $("select[id=direction] option:selected").val();
+    showPath(line, direction);
 }
 
 $(document).ready(function(){
     $("select[name='direction']").change(loadBusEvent);
     $("select[name='lines']").change(loadBusEvent);
+    $("input[name='show-path']").change(showPathEvent);
 });
     </script>
 {% endblock%}
@@ -41,7 +49,7 @@ $(document).ready(function(){
 	    <!-- <input name="submit" type="submit" value="Mostrar" onclick="javascript:KmlLayer()"></input> -->
 
 	    <br />
-	    Paradas: {{ form.lines }} {{ form.direction }}
+	    Paradas: {{ form.lines }} {{ form.direction }} <label for="show-path">Mostrar recorrido<input name="show-path" type="checkbox" /></label>
 	    <br />
 	    <div id="directions"></div>
 
