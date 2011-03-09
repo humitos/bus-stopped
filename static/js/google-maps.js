@@ -177,6 +177,34 @@ function getNearBusStop(){
               });
 }
 
+
+function showPath(line, direction){
+
+    $.getJSON('/ajax/getbuspaths',
+              function(data){
+		  // This .kml MUST be in public domain
+		  var url = window.location.href;
+		  // FIXME: Just for DEBUG
+		  if(url.indexOf('localhost') >= 0){
+		      url = 'http://humitos.homelinux.net:8007';
+		  }
+		  if(data[line][direction]){
+		      url += data[line][direction].url.substr(1);
+		      var kml_layer = new google.maps.KmlLayer(url,
+							       {preserveViewport: true, 
+								suppressInfoWindows:true});
+		      kml_layer.setMap(map);
+		      layers.push(kml_layer);
+		  }
+	      });
+}
+
+function hidePaths(){
+    for(i = 0;i < layers.length; i++){
+	layers[0].setMap(null);
+    }
+}
+
 function KmlLayer(){
     var line = $('select[name=path-line] option:selected').val();
     var direction = $('select[name=path-direction] option:selected').val();

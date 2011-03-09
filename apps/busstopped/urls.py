@@ -23,6 +23,7 @@ def get_rules(app):
         Rule('/', endpoint='home', handler='apps.busstopped.handlers.MainPage'),
         Rule('/ajax/busstopped/<line>/<direction>', endpoint='ajax-busstopped', handler='apps.busstopped.handlers.AjaxGetBusStopped'),
         Rule('/ajax/point', endpoint='ajax-point', handler='apps.busstopped.handlers.AjaxGetBusStopTimes'),
+        Rule('/ajax/getbuspaths', endpoint='ajax-getbuspath', handler='apps.busstopped.handlers.AjaxGetBusPath'),
         Rule('/faq', endpoint='faq', handler='apps.busstopped.handlers.FAQPage'),
         Rule('/changelog', endpoint='change-log', handler='apps.busstopped.handlers.ChangeLogPage'),
         Rule('/info', endpoint='info', handler='apps.busstopped.handlers.InfoPage'),

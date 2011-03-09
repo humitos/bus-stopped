@@ -12,7 +12,16 @@
 function loadBusEvent(){
     var line = $("select[id=lines] option:selected").val();
     var direction = $("select[id=direction] option:selected").val();
+    var show_path = $("input[id=show-path]").attr('checked', false);
+    hidePaths();
     loadBusStop(line, direction);
+}
+
+function showPathEvent(){
+    var line = $("select[id=lines] option:selected").val();
+    var direction = $("select[id=direction] option:selected").val();
+    hidePaths();
+    showPath(line, direction);
 }
 
 $(document).ready(function(){
@@ -42,6 +51,9 @@ $(document).ready(function(){
 
 	    <br />
 	    Paradas: {{ form.lines }} {{ form.direction }}
+	    <input id="show-path" name="show-path" type="checkbox" onclick="javascript:showPathEvent()">
+	      <label for="show-path">Mostrar recorrido</label>
+	    </input>
 	    <br />
 	    <div id="directions"></div>
 

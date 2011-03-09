@@ -14,7 +14,7 @@ import filters
 import settings
 import utils
 
-from models import BusStop, News, BusTime, BusDirection
+from models import BusStop, News, BusTime, BusDirection, BusPath
 from forms import ViewBusStopLinesForm
 from dateutil.relativedelta import relativedelta
 
@@ -120,6 +120,27 @@ class AjaxGetBusStopTimes(RequestHandler):
         return render_json_response({
                 'info_content': info_content
                 })
+
+
+class AjaxGetBusPath(RequestHandler):
+    def get(self, line=None, direction=None, **kwargs):
+
+        form = ViewBusStopLinesForm()
+        lines = form.lines.choices
+        response = {}
+        for l in lines:
+            response[l[0]] = {}
+
+        print response
+        bus_paths = BusPath.all()
+        for bp in bus_paths:
+            response[bp.bus_line][bp.direction] = {
+                'bus_line': bp.bus_line,
+                'filename': bp.filename,
+                'url': settings.MEDIA_URL + 'kml/' + bp.filename,
+                'direction': bp.direction,
+                }
+        return render_json_response(response)
 
 
 class FAQPage(RequestHandler):
