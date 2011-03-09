@@ -186,7 +186,7 @@ function showPath(line, direction){
 		  var url = window.location.href;
 		  // FIXME: Just for DEBUG
 		  if(url.indexOf('localhost') >= 0){
-		      url = 'http://humitos.homelinux.net:8007';
+		      url = 'http://humitos.homelinux.net:8007/';
 		  }
 		  if(data[line][direction]){
 		      url += data[line][direction].url.substr(1);
