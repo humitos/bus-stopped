@@ -25,6 +25,10 @@ handlers:
   script: main.py
   login: admin
 
+- url: /cron/news
+  script: cron/search_news.py
+  login: admin
+
 - url: /.*
   script: main.py
 

@@ -88,3 +88,12 @@ class News(db.Model):
 
     def __repr__(self):
         return '(%s) %s' % (self.date, self.title)
+
+
+class ExternalNews(db.Model):
+    site = db.StringProperty(required=True)
+    date = db.DateProperty(required=True)
+
+
+    def __repr__(self):
+        return '(%s) %s' % (self.site, self.date)

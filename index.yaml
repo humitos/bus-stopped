@@ -67,3 +67,8 @@ indexes:
   - name: bus_stop
   - name: time
     direction: desc
+
+- kind: ExternalNews
+  properties:
+  - name: site
+  - name: date
