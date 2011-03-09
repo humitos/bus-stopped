@@ -8,9 +8,6 @@ if 'lib' not in sys.path:
         path = os.path.join(os.path.dirname(os.path.dirname(__file__)), p)
         sys.path.insert(0, path)
 
-    print sys.path
-
-
 import re
 import urllib2
 import datetime
