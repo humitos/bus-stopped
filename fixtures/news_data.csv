@@ -9,3 +9,4 @@
 "7/3/2011","Linea 15","<p>Agregamos los horarios de la Linea 15</p>"
 "8/3/2011","Horarios de IDA de la Línea 1","<p>Faltaban los horarios de la Línea 1 en su recorrido de IDA y ahora están cargados :)</p>"
 "8/3/2011","Actualización de Horarios","<p>Actualicé muchos horarios que o bien estaban mal o bien faltaban en las paradas intermedias de las que se listan en los horarios oficiales (los calculados)</p>"
+"9/3/2011","Recorridos para las Líneas 5, 6 y 10","<p>Ahora podemos ver los recorridos de las Líneas 5, 6 y 10 dentro del mapa. Indicando con ROJO si es el recorrido de Vuelta y AZUL si es el de IDA</p>"
