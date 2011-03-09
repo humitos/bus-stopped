@@ -1,9 +1,14 @@
+import os
 import sys
 
 if 'lib' not in sys.path:
     # Add /lib as primary libraries directory, with fallback to /distlib
     # and optionally to distlib loaded using zipimport.
-    sys.path[0:0] = ['../lib', '../distlib', '../distlib.zip']
+    for p in ['lib', 'distlib', 'distlib.zip']:
+        path = os.path.join(os.path.dirname(os.path.dirname(__file__)), p)
+        sys.path.insert(0, path)
+
+    print sys.path
 
 
 import re
