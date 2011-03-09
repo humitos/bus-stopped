@@ -49,7 +49,7 @@ def la_victoria_news():
     if (db_last_date == None) or (last_date > db_last_date):
         site = 'La Victoria'
         send_mail(site=site, url=URL)
-        en = ExternalNews(site=site, date=last_date.date())
+        en = ExternalNews(site=site, date=last_date)
         en.put()
 
 def diario_uno_parana_news():
