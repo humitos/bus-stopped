@@ -93,11 +93,18 @@ class BusDirection(db.Model):
     from_direction = db.StringProperty(required=True)
     to_direction = db.StringProperty(required=True)
 
+    def __repr__(self):
+        return '%s - FROM: %s TO: %s (%s)' % (self.bus_line, self.from_direction,
+                                              self.to_direction, self.direction)
+
 
 class BusPath(db.Model):
     bus_line = db.StringProperty(required=True)
     direction = db.StringProperty(choices=set(['Ida', 'Vuelta']))
     filename = db.StringProperty(required=True)
+
+    def __repr__(self):
+        return '(%s) %s - %s' % (self.filename, self.bus_line, self.direction)
 
 
 class News(db.Model):
