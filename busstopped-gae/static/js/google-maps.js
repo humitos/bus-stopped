@@ -201,7 +201,7 @@ function showPath(line, direction){
 
 function hidePaths(){
     for(i = 0;i < layers.length; i++){
-	layers[0].setMap(null);
+	layers[i].setMap(null);
     }
 }
 
