@@ -4,7 +4,7 @@
 import sys
 import os.path
 dirpath = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
-sys.path.append(os.path.join(os.path.dirname(dirpath)))
+sys.path.append(os.path.join(os.path.dirname(dirpath), 'busstopped-gae'))
 
 # We HAVE TO import this model so appcfg.py could recognize it
 from apps.busstopped.models import *

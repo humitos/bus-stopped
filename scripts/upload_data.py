@@ -17,7 +17,7 @@ if remote == True:
     --email=humitos@gmail.com \
     --config_file=%s \
     --filename=%s \
-    --kind=%s ../ \
+    --kind=%s ../busstopped-gae \
     --has_header \
     --log_file=../../bulkloader/logger.log \
     --db_filename=../../bulkloader/%s.sql3 \
@@ -28,7 +28,7 @@ else:
     --email=humitos@gmail.com \
     --config_file=%s \
     --filename=%s \
-    --kind=%s ../ \
+    --kind=%s ../busstopped-gae \
     --url=http://localhost:8007/remote_api \
     --has_header \
     --log_file=../../bulkloader/logger.log \
