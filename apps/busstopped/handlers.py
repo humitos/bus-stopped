@@ -9,6 +9,8 @@
     :license: BSD, see LICENSE for more details.
 """
 
+import datetime
+
 # We MUST import this file (filters.py) because it's required by LOADERS
 import filters
 import settings
@@ -30,6 +32,7 @@ def request_context(context):
     def js_string(value):
         return '\'' + value + '\''
 
+    # TODO: convert this to a JSON file
     js_settings = {
         'MEDIA_URL': js_string(settings.MEDIA_URL),
         'INITIAL_LOCATION': settings.INITIAL_LOCATION,
@@ -106,9 +109,14 @@ class AjaxGetBusStopTimes(RequestHandler):
         info_content = '<b>%s</b><br /> %s<br /><em style="font-size: 10px">%s</em>' % \
             (bus_stop.name, bus_stop.address, utils.get_weekday_display())
         for bus_time in bus_times:
-            info_content += '<br /><b>%s min:</b> %s <span>%s</span>' % \
-                (relativedelta(bus_time.time_1970(), utils.now_time()).minutes,
-                 bus_time.direction, bus_time.time.strftime('%H:%M'))
+            left_time = relativedelta(bus_time.time_1970(), utils.now_time()).minutes
+            if left_time < 0:
+                # Time over 00hs
+                next_day = bus_time.time_1970() + datetime.timedelta(days=1)
+                left_time = relativedelta(next_day, utils.now_time()).minutes
+            time = bus_time.time.strftime('%H:%M')
+
+            info_content += '<br /><b>%s min:</b><span> %s hs</span>' % (left_time, time)
 
             if bus_time.comments:
                 info_content += '<em> ('

@@ -30,8 +30,6 @@ class BusStop(db.Model):
         weekday = utils.get_weekday_display()
 
         now = utils.now_time()
-        # Testing
-        # now = datetime.datetime(1970,1,1,5,30,0)
         next_minutes = now + datetime.timedelta(minutes=next_minutes)
 
         query = db.Query(BusTime)
@@ -43,11 +41,33 @@ class BusStop(db.Model):
             query.filter('direction =', direction)
         query.order('time')
         count = query.count()
+        results = query.fetch(count)
+
+        if next_minutes.day != now.day:
+            # next_minutes is over 00hs, so we have to subs a day
+            # TODO: I couldn't find the way to use the OR Logical operator
+
+            next_minutes = next_minutes - datetime.timedelta(days=1)
+            # results = BusTime.gql('WHERE bus_stop = :1 AND (time <= :2 OR time) >= :3 AND days = :4 ORDER BY time',
+            #                       self.key(), next_minutes, now, weekday)
+            query = db.Query(BusTime)
+            query.filter('bus_stop =', self.key())
+            query.filter('time <=', next_minutes)
+            # query.filter('time >=', now)
+            query.filter('days =', weekday)
+            if direction:
+                query.filter('direction =', direction)
+            query.order('time')
+            count = query.count()
+            results.extend(query.fetch(count))
+            # new_results.extend(results)
+            # results = new_results
+
+
         # Try again if there are any time.
         # if count == 0:
         #     # FIXME: this could be dangerous (infinite recursion)
         #     return self.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES + 30, direction)
-        results = query.fetch(count)
         return results
 
 
