@@ -65,6 +65,9 @@ def parse_times(filename, line, direction, days):
         #                     (' (DP)', 'Llega a Divina Providencia'),
         #                     (' (SR)', 'Llega a Cementerio Solar del Rio')],
         #       },
+        '22bis': {'Ida':    [],
+                  'Vuelta': [],
+                  },
         }
 
 
