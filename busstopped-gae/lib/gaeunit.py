@@ -74,6 +74,11 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 _LOCAL_TEST_DIR = '../test'  # location of files
 _WEB_TEST_DIR = '/test'   # how you want to refer to tests on your web server
 
+# add Python SDK to the package PATH
+DIRNAME = os.path.dirname(__file__)
+for p in ['lib', 'distlib', 'distlib.zip']:
+    sys.path.insert(0, os.path.join(DIRNAME, p))
+
 # or:
 # _WEB_TEST_DIR = '/u/test'
 # then in app.yaml:
