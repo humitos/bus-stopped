@@ -29,10 +29,6 @@ handlers:
   script: cron/search_news.py
   login: admin
 
-- url: /test.*
-  login: admin
-  script: lib/gaeunit.py
-
 - url: /.*
   script: main.py
 
