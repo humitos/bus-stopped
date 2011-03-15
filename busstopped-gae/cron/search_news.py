@@ -29,7 +29,7 @@ def send_mail(site=None, url=None):
 def get_db_last_date(site=None):
     query = ExternalNews.all()
     query.filter('site =', site)
-    query.order('date')
+    query.order('-date')
     last_news = query.fetch(1)
     if query.count():
         return last_news[0].date
