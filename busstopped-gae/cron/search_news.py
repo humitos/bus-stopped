@@ -81,9 +81,19 @@ def el_diario_news():
     if regex.match(data):
         send_mail(site='El Diario', url=URL)
 
+def el_once_news():
+    URL = 'http://www.elonce.com/'
+
+    data = urllib2.urlopen(URL).read()
+
+    regex = re.compile('colectivo')
+    if regex.match(data):
+        send_mail(site='El Once.com', url=URL)
+
 
 if __name__ == '__main__':
     la_victoria_news()
     diario_uno_parana_news()
     diario_uno_entrerios_news()
     el_diario_news()
+    el_once_news()
