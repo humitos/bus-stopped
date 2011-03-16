@@ -18,7 +18,7 @@ import datetime
 
 from apps.busstopped.models import ExternalNews
 
-import BeautifulSoup
+from BeautifulSoup import BeautifulSoup
 
 from google.appengine.api import mail
 
@@ -64,7 +64,7 @@ def la_victoria_news():
     site = 'La Victoria'
 
     # <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    soup = BeautifulSoup.BeautifulSoup(urllib2.urlopen(URL).read())
+    soup = BeautifulSoup(urllib2.urlopen(URL).read())
 
     last_new = soup.find('div', attrs={'id': 'container'}).find('td')
     text = last_new.text
@@ -80,7 +80,7 @@ def diario_uno_parana_news():
 
     # THIS <meta> ISN'T VALID!!
     # <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    soup = BeautifulSoup.BeautifulSoup(urllib2.urlopen(URL).read())
+    soup = BeautifulSoup(urllib2.urlopen(URL).read())
     all_content = soup.find('div', attrs={'class': 'content'})
     news = all_content.findAll('div', attrs={'class': None, 'style': None})
 
@@ -96,11 +96,16 @@ def diario_uno_entrerios_news():
     URL = 'http://www.unoentrerios.com.ar/'
 
     # <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    data = urllib2.urlopen(URL).read().decode('utf8')
+    soup = BeautifulSoup(urllib2.urlopen(URL).read())
+    news = soup.findAll('div', attrs={'class': 'nota-portada'})
 
-    match = regex.match(data)
-    if match:
-        send_mail(match.group(), site='Diario Uno Entre Rios', url=URL)
+    for n in news:
+        title = n.find('h2').text
+        content = n.findAll('p')[1].text
+        link = URL[:-1] + n.a.get('href')
+        match = regex.match(content) or regex.match(title)
+        if match:
+            send_mail(title, content, link, site='Diario Uno Entre Rios', url=URL)
 
 def el_diario_news():
     URL = 'http://www.eldiario.com.ar/'
