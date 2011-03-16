@@ -131,11 +131,17 @@ def el_once_news():
     URL = 'http://www.elonce.com/'
 
     # <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    data = urllib2.urlopen(URL).read().decode('iso-8859-1')
+    soup = BeautifulSoup(urllib2.urlopen(URL).read())
+    news = soup.findAll('div', attrs={'class': 'noticia emptyall'})
 
-    match = regex.match(data)
-    if match:
-        send_mail(match.group(), site='El Once.com', url=URL)
+
+    for n in news:
+        title = n.h2.text
+        content = n.div.text
+        link = URL[:-1] + n.a.get('href')
+        match = regex.match(content) or regex.match(title)
+        if match:
+            send_mail(title, content, link, site='El Once.com', url=URL)
 
 
 if __name__ == '__main__':
