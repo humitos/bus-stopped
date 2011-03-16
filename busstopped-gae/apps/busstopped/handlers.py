@@ -106,8 +106,20 @@ class AjaxGetBusStopTimes(RequestHandler):
         bus_times = bus_stop.get_next_bus_times(settings.NEXT_BUS_TIME_MINUTES,
                                                 direction=directions)
 
-        info_content = '<b>%s</b><br /> %s<br /><em style="font-size: 10px">%s</em>' % \
-            (bus_stop.name, bus_stop.address, utils.get_weekday_display())
+        bus_direction = BusDirection.all()
+        bus_direction.filter('direction =', directions)
+        # README
+        # BadValueError: Filtering on lists is not supported
+        # We can't use "bus_direction.filter('bus_line =', bus_stop.lines)"
+        # So, in the while we will use "bus_stop.lines[0]" because a BusStop only
+        # has one line for the moment
+        bus_direction.filter('bus_line =', bus_stop.lines[0])
+        bus_direction = bus_direction.fetch(1)
+        bus_direction = bus_direction[0]
+
+
+        info_content = '<b>%s</b><br /> %s<br /><em style="font-size: 10px">%s / Hacia: %s (%s)</em>' % \
+            (bus_stop.name, bus_stop.address, utils.get_weekday_display(), bus_direction.to_direction, bus_direction.direction)
         for bus_time in bus_times:
             left_time = relativedelta(bus_time.time_1970(), utils.now_time()).minutes
             if left_time < 0:
