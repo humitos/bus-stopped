@@ -16,3 +16,9 @@ indexes:
   - name: days
   - name: direction
   - name: time
+
+- kind: ExternalNews
+  properties:
+  - name: site
+  - name: date
+    direction: desc
