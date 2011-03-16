@@ -64,8 +64,7 @@ def la_victoria_news():
     site = 'La Victoria'
 
     # <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    data = urllib2.urlopen(URL).read().decode('windows-1252')
-    soup = BeautifulSoup.BeautifulSoup(data)
+    soup = BeautifulSoup.BeautifulSoup(urllib2.urlopen(URL).read())
 
     last_new = soup.find('div', attrs={'id': 'container'}).find('td')
     text = last_new.text
@@ -74,9 +73,7 @@ def la_victoria_news():
     db_last_date = get_db_last_date(site=site)
 
     if (db_last_date == None) or (last_date > db_last_date):
-        send_mail(last_new.text, site=site, url=URL)
-        en = ExternalNews(site=site, date=last_date)
-        en.put()
+        send_mail('Novedad La Victoria SRL', text, link=URL, site=site, url=URL)
 
 def diario_uno_parana_news():
     URL = 'http://edimpresa.unoentrerios.com.ar/v2/municipios/?municipio=1'
