@@ -7,8 +7,10 @@ if 'lib' not in sys.path:
     # Add /lib as primary libraries directory, with fallback to /distlib
     # and optionally to distlib loaded using zipimport.
     for p in ['lib', 'distlib', 'distlib.zip']:
-        path = os.path.join(os.path.dirname(os.path.dirname(__file__)), p)
-        sys.path.insert(0, path)
+        basedir = os.path.dirname(os.path.dirname(__file__))
+        path = os.path.join(basedir, p)
+        if path not in sys.path:
+            sys.path.insert(0, path)
 
 import re
 import urllib2
