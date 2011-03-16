@@ -118,9 +118,11 @@ class News(db.Model):
 
 
 class ExternalNews(db.Model):
+    title = db.StringProperty(required=True)
+    content = db.TextProperty(required=True)
     site = db.StringProperty(required=True)
     date = db.DateProperty(required=True)
-
+    link = db.StringProperty(required=True)
 
     def __repr__(self):
         return '(%s) %s' % (self.site, self.date)
