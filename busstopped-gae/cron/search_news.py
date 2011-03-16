@@ -111,11 +111,21 @@ def el_diario_news():
     URL = 'http://www.eldiario.com.ar/'
 
     # <meta> is missing
-    data = urllib2.urlopen(URL).read()
+    soup = BeautifulSoup(urllib2.urlopen(URL).read())
+    content = soup.find('table', attrs={'bgcolor': '#FF0000'})
+    all_news = content.findAll('table')[1]
+    news = all_news.findAll('table')
+    for n in news:
+        try:
+            title = n.findAll('font')[2].text
+            content = n.findAll('font')[4].text
+            link = n.findAll('a')[0].get('href')
+            match = regex.match(content) or regex.match(title)
+            if match:
+                send_mail(title, content, link, site='El Diario', url=URL)
+        except IndexError:
+            pass
 
-    match = regex.match(data)
-    if match:
-        send_mail(match.group(), site='El Diario', url=URL)
 
 def el_once_news():
     URL = 'http://www.elonce.com/'
