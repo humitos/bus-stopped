@@ -29,7 +29,7 @@ class BusStop(db.Model):
     def get_next_bus_times(self, next_minutes, direction=None):
         weekday = utils.get_weekday_display()
 
-        now = utils.now_time()
+        now = utils.now_time() - datetime.timedelta(minutes=settings.PREVIOUS_BUS_TIME_MINUTES)
         next_minutes = now + datetime.timedelta(minutes=next_minutes)
 
         query = db.Query(BusTime)

@@ -122,13 +122,23 @@ class AjaxGetBusStopTimes(RequestHandler):
             (bus_stop.name, bus_stop.address, utils.get_weekday_display(), bus_direction.to_direction, bus_direction.direction)
         for bus_time in bus_times:
             left_time = relativedelta(bus_time.time_1970(), utils.now_time()).minutes
+            bus_already_gone = False
             if left_time < 0:
-                # Time over 00hs
-                next_day = bus_time.time_1970() + datetime.timedelta(days=1)
-                left_time = relativedelta(next_day, utils.now_time()).minutes
+                if bus_time.time_1970().hour == 0:
+                    # Time over 00hs
+                    next_day = bus_time.time_1970() + datetime.timedelta(days=1)
+                    left_time = relativedelta(next_day, utils.now_time()).minutes
+                else:
+                    # This bus has already gone by
+                    bus_already_gone = True
             time = bus_time.time.strftime('%H:%M')
 
-            info_content += '<br /><b>%s min:</b><span> %s hs</span>' % (left_time, time)
+            time_content = '<br /><b>%s min:</b><span> %s hs</span>' % (left_time, time)
+
+            if bus_already_gone:
+                info_content += '<span style="color: red">' + time_content + '</span>'
+            else:
+                info_content += time_content
 
             if bus_time.comments:
                 info_content += '<em> ('

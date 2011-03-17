@@ -3,6 +3,7 @@
 MEDIA_URL = '/static/'
 
 NEXT_BUS_TIME_MINUTES = 30
+PREVIOUS_BUS_TIME_MINUTES = 7
 
 # Paraná - Entre Ríos
 INITIAL_LOCATION = {
