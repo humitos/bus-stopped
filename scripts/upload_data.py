@@ -26,6 +26,7 @@ if remote == True:
 else:
     cmd = '''../../google_appengine/appcfg.py upload_data \
     --email=humitos@gmail.com \
+    --rps_limit=75 \
     --config_file=%s \
     --filename=%s \
     --kind=%s ../busstopped-gae \
