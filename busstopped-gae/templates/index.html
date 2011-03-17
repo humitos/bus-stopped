@@ -12,16 +12,20 @@
 function loadBusEvent(){
     var line = $("select[id=lines] option:selected").val();
     var direction = $("select[id=direction] option:selected").val();
-    var show_path = $("input[id=show-path]").attr('checked', false);
-    hidePaths();
+    // Commented by Issue #28 - https://github.com/humitos/bus-stopped/issues#issue/28
+    // var show_path = $("input[id=show-path]").attr('checked', false);
     loadBusStop(line, direction);
+    showPathEvent();
 }
 
 function showPathEvent(){
-    var line = $("select[id=lines] option:selected").val();
-    var direction = $("select[id=direction] option:selected").val();
+    var show_path = $("input[id=show-path]").attr("checked");
     hidePaths();
-    showPath(line, direction);
+    if(show_path){
+        var line = $("select[id=lines] option:selected").val();
+        var direction = $("select[id=direction] option:selected").val();
+        showPath(line, direction);
+    }
 }
 
 $(document).ready(function(){
