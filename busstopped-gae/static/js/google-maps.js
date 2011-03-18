@@ -81,7 +81,7 @@ function loadBusStop(line, direction) {
 
 function initialize() {
 
-    loadBusEvent();
+    // loadBusEvent();
     // map.fitBounds(bounds);
 
 }
