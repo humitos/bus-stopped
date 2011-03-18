@@ -17,6 +17,7 @@ $(document).ready(function(){
 		      layers = [];
 		      card_sell_point = false;
 		      last_info_window = new google.maps.InfoWindow();
+		      line_selected = '1'; // default
                   });
 
 function loadBusStop(line, direction) {
