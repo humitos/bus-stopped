@@ -75,7 +75,8 @@ $(document).ready(function(){
 	    {% for line in form.lines.choices %}
 	    <a href="#">
 	      <img onclick="$('.line-icon').addClass('opacity');$(this).removeClass('opacity');loadBusEvent('{{ line.0 }}'); return false;"
-	           class="line-icon opacity" style="border: 0;" src="{{ MEDIA_URL }}img/gmarkers/icon_line_{{ line.0|slugify }}.png" />
+	           class="line-icon opacity" style="border: 0;" src="{{ MEDIA_URL }}img/gmarkers/icon_line_{{ line.0|slugify }}.png"
+	           title="{{ line.1 }}" alt="{{ line.1 }}" />
 	    </a>
 	    {% endfor %}
 	    <br />
