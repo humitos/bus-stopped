@@ -8,6 +8,7 @@
 
     <!-- <script src="/static/js/detect-location.js" type="text/javascript"></script> -->
     <script src="/static/js/google-maps.js" type="text/javascript"></script>
+    <script src="/static/js/clock.js" type="text/javascript"></script>
     <script type="text/javascript">
 function loadBusEvent(line){
     if(line == undefined){
@@ -46,6 +47,10 @@ function showCardSellPointsEvent(){
 $(document).ready(function(){
     $("select[name='direction']").change(function(event){ loadBusEvent();});
 });
+    </script>
+    <script language="JavaScript" type="text/javascript">
+        now = new Date(CLOCK.year, CLOCK.month, CLOCK.day, CLOCK.hour, CLOCK.minute, CLOCK.second);
+        $(document).ready(function(){var t = setTimeout("clock_tick()", 1000);});
     </script>
 {% endblock%}
 

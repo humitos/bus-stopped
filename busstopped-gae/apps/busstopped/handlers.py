@@ -9,6 +9,7 @@
     :license: BSD, see LICENSE for more details.
 """
 
+import pytz
 import datetime
 
 # We MUST import this file (filters.py) because it's required by LOADERS
@@ -16,7 +17,7 @@ import filters
 import settings
 import utils
 
-from models import BusStop, News, BusTime, BusDirection, BusPath
+from models import BusStop, News, BusDirection, BusPath
 from forms import ViewBusStopLinesForm
 from dateutil.relativedelta import relativedelta
 
@@ -27,16 +28,22 @@ from google.appengine.ext import db
 from tipfy import RequestHandler, render_json_response, cached_property
 from tipfy.ext.jinja2 import render_response
 
+from django.utils import simplejson
 
 def request_context(context):
     def js_string(value):
         return '\'' + value + '\''
 
+    now = datetime.datetime.now(pytz.timezone('America/Argentina/Buenos_Aires'))
     # TODO: convert this to a JSON file
     js_settings = {
         'MEDIA_URL': js_string(settings.MEDIA_URL),
         'INITIAL_LOCATION': settings.INITIAL_LOCATION,
         'WEEKDAY': js_string(utils.get_weekday_display()),
+        'CLOCK': simplejson.dumps({
+                'year': now.year, 'month': now.month, 'day': now.day,
+                'hour': now.hour, 'minute': now.minute, 'second': now.second
+                })
         }
 
     context.update({
