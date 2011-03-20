@@ -218,3 +218,12 @@ class InfoPage(RequestHandler):
 
         return render_response('info.html', **context)
 
+class AddPointDocPage(RequestHandler):
+    def get(self, **kwargs):
+        context = {
+            }
+
+        context = request_context(context)
+
+        return render_response('add_point_doc.html', **context)
+
