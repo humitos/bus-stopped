@@ -1,9 +1,11 @@
-"BusLine","Direction","Filename"
-5,"Ida","linea_5_ida.kmz"
-5,"Vuelta","linea_5_vuelta.kmz"
-10,"Ida","linea_10_ida.kmz"
-10,"Vuelta","linea_10_vuelta.kmz"
-"11-21","Ida","linea_11_21_ida.kmz"
-"11-21","Vuelta","linea_11_21_vuelta.kmz"
-15,"Ida","linea_15_ida.kmz"
-15,"Vuelta","linea_15_vuelta.kmz"
+"BusLine","Direction","Filename","Branch Line"
+1,"Ida","linea_1_ida_hospital.kmz","Hospital Roballo / Toma Nueva por Thompson"
+1,"Vuelta","linea_1_vuelta_hospital.kmz","Hospital Roballo / Toma Nueva por Thompson"
+5,"Ida","linea_5_ida.kmz",
+5,"Vuelta","linea_5_vuelta.kmz",
+10,"Ida","linea_10_ida.kmz",
+10,"Vuelta","linea_10_vuelta.kmz",
+"11-21","Ida","linea_11_21_ida.kmz",
+"11-21","Vuelta","linea_11_21_vuelta.kmz",
+15,"Ida","linea_15_ida.kmz",
+15,"Vuelta","linea_15_vuelta.kmz",

@@ -20,9 +20,9 @@ $(document).ready(function(){
 		      line_selected = '1'; // default
                   });
 
-function loadBusStop(line, direction) {
+function loadBusStop(line, direction, branch_line) {
     var url = '/ajax/busstopped/';
-    url += line + '/' + direction;
+    url += line + '/' + direction + '/' + branch_line;
 
     $.each(markers, function(i, marker){
     	       marker.setMap(null);
@@ -180,7 +180,7 @@ function getNearBusStop(){
 }
 
 
-function showPath(line, direction){
+function showPath(line, direction, branch_line){
 
     $.getJSON('/ajax/getbuspaths',
               function(data){
@@ -190,8 +190,8 @@ function showPath(line, direction){
 		  if(url.indexOf('localhost') >= 0){
 		      url = 'http://humitos.homelinux.net:8007/';
 		  }
-		  if(data[line][direction]){
-		      url += data[line][direction].url.substr(1);
+		  if(data[line][direction][branch_line]){
+		      url += data[line][direction][branch_line].url.substr(1);
 		      var kml_layer = new google.maps.KmlLayer(url,
 							       {preserveViewport: true, 
 								suppressInfoWindows:true});
@@ -241,3 +241,16 @@ function hideCardSellPoints(){
 	card_sell_point.setMap(null);
     }
 }
+
+function getBranchLines(line){
+    var url = '/ajax/getbusbranchlines/';
+    url += line;
+    $.getJSON(url,
+	      function(data){
+		  $("select[name='branch-line']").html('');
+		  for(i=0;i < data.length;i++){
+		      $("select[name='branch-line']").append($('<option></option>').attr('value', data[i]).text(data[i]));
+		  }
+	      });
+}
+

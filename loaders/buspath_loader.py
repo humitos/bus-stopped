@@ -13,7 +13,7 @@ from google.appengine.tools import bulkloader
 
 
 def parse_list(d):
-    return d.split(',')
+    return [s.decode('utf-8') for s in d.split(',')]
 
 def get_string(s):
     return s.decode('utf-8')
@@ -25,6 +25,7 @@ class BusPathLoader(bulkloader.Loader):
                 ('bus_line', get_string),
                 ('direction', get_string),
                 ('filename', get_string),
+                ('branch_lines', parse_list),
                 ])
 
     def generate_key(self, i, values):

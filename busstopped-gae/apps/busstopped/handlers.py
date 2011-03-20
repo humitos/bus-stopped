@@ -70,10 +70,11 @@ class MainPage(RequestHandler):
 
 
 class AjaxGetBusStopped(RequestHandler):
-    def get(self, line=None, direction=None, **kwargs):
+    def get(self, line=None, direction=None, branch_lines=None, **kwargs):
         bus_stops = BusStop.all()
         bus_stops.filter('lines =', line)
         bus_stops.filter('directions =', direction)
+        bus_stops.filter('branch_lines =', branch_lines)
 
         ds = BusDirection.all()
         ds.filter('bus_line =', line)
@@ -92,7 +93,7 @@ class AjaxGetBusStopped(RequestHandler):
                 'key': str(bs.key()),
                 'address': bs.address,
                 'icon': '/static/img/gmarkers/red_bus.png',
-                'shadow': '/static/img/gmarkers/shadow_bus.png',
+                # 'shadow': '/static/img/gmarkers/shadow_bus.png',
                 'latitude': bs.point.lat,
                 'longitude': bs.point.lon,
                 'directions': bs.directions,
@@ -171,13 +172,25 @@ class AjaxGetBusPath(RequestHandler):
         print response
         bus_paths = BusPath.all()
         for bp in bus_paths:
-            response[bp.bus_line][bp.direction] = {
-                'bus_line': bp.bus_line,
-                'filename': bp.filename,
-                'url': settings.MEDIA_URL + 'kml/' + bp.filename,
-                'direction': bp.direction,
-                }
+            for bl in bp.branch_lines:
+                response[bp.bus_line][bp.direction][bl] = {
+                    'bus_line': bp.bus_line,
+                    'filename': bp.filename,
+                    'url': settings.MEDIA_URL + 'kml/' + bp.filename,
+                    'direction': bp.direction,
+                    }
         return render_json_response(response)
+
+
+class AjaxGetBusBranchLines(RequestHandler):
+    def get(self, line=None):
+        bus_paths = BusPath.all()
+        #bus_paths.filter('bus_line =', line)
+        response = set()
+        for bp in bus_paths:
+            for bl in bp.branch_lines:
+                response.add(bl)
+        return render_json_response(list(response))
 
 
 class FAQPage(RequestHandler):

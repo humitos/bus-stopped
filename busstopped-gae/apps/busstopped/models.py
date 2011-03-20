@@ -18,6 +18,8 @@ class BusStop(db.Model):
     address = db.StringProperty(required=True)
     lines = db.StringListProperty(required=True)
     directions = db.StringListProperty(required=True)
+    branch_lines = db.StringListProperty(required=True)
+
 
     def __repr__(self):
         return '%s' % self.name
@@ -102,6 +104,8 @@ class BusPath(db.Model):
     bus_line = db.StringProperty(required=True)
     direction = db.StringProperty(choices=set(['Ida', 'Vuelta']))
     filename = db.StringProperty(required=True)
+    branch_lines = db.StringListProperty(required=True)
+
 
     def __repr__(self):
         return '(%s) %s - %s' % (self.filename, self.bus_line, self.direction)
