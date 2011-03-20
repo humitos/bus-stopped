@@ -2,3 +2,7 @@ appcfg.py
 dev_appserver.py
 google_appengine/
 google_appengine_1.4.2.zip
+*.pyc
+*~
+*#
+
