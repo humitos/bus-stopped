@@ -6,7 +6,8 @@ function loadBusEvent(line){
         line_selected = line;
     }
     var direction = $("select[id=direction] option:selected").val();
-    var branch_line = $("select[id=branch-line] option:selected").val();
+    var branch_line = $("select[name=branch-line] option:selected").val();
+    alert(branch_line);
     // Commented by Issue #28 - https://github.com/humitos/bus-stopped/issues#issue/28
     // var show_path = $("input[id=show-path]").attr('checked', false);
     loadBusStop(line, direction, branch_line);
@@ -18,7 +19,7 @@ function showPathEvent(){
     hidePaths();
     if(show_path){
         var direction = $("select[id=direction] option:selected").val();
-        var branch_line = $("select[id=branch-line] option:selected").val();
+        var branch_line = $("select[name=branch-line] option:selected").val();
         showPath(line_selected, direction, branch_line);
     }
 }
@@ -35,14 +36,20 @@ function showCardSellPointsEvent(){
 }
 
 $(document).ready(function(){
-		      $("select[name='direction']").change(function(event){
-							       var line = line_selected;
-							       getBranchLines(line);
-							       loadBusEvent();
-							   });
+		      $(".line-icon").click(function(event){
+						$('.line-icon').addClass('opacity');
+						$(this).removeClass('opacity');
+						var direction = $("select[id=direction] option:selected").val();
+						getBranchLines($(this).attr('id'));
+						loadBusEvent($(this).attr('id'));
+						return false;
+					    });
 		      $("select[name='branch-line']").change(function(event){ 
 								 loadBusEvent();
 							     });
+		      $("select[name='direction']").change(function(event){ 
+							       loadBusEvent();
+							   });
 		      now = new Date(CLOCK.year, CLOCK.month, CLOCK.day, CLOCK.hour, CLOCK.minute, CLOCK.second);
 		      $(document).ready(function(){var t = setTimeout("clock_tick()", 1000);});
 		  });

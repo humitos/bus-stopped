@@ -182,6 +182,7 @@ function getNearBusStop(){
 
 function showPath(line, direction, branch_line){
 
+    alert(branch_line);
     $.getJSON('/ajax/getbuspaths',
               function(data){
 		  // This .kml MUST be in public domain
@@ -243,14 +244,9 @@ function hideCardSellPoints(){
 }
 
 function getBranchLines(line){
-    var url = '/ajax/getbusbranchlines/';
-    url += line;
-    $.getJSON(url,
-	      function(data){
-		  $("select[name='branch-line']").html('');
-		  for(i=0;i < data.length;i++){
-		      $("select[name='branch-line']").append($('<option></option>').attr('value', data[i]).text(data[i]));
-		  }
-	      });
+    $("select[name='branch-line']").html('');
+    for(i=0;i < BRANCH_LINES[line].length;i++){
+	$("select[name='branch-line']").append($('<option></option>').attr('value', BRANCH_LINES[line][i]).text(BRANCH_LINES[line][i]));
+    }
 }
 

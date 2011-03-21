@@ -25,7 +25,7 @@ class BusPathLoader(bulkloader.Loader):
                 ('bus_line', get_string),
                 ('direction', get_string),
                 ('filename', get_string),
-                ('branch_lines', parse_list),
+                ('branch_line', get_string),
                 ])
 
     def generate_key(self, i, values):

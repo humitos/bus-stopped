@@ -1,11 +1,19 @@
 "BusLine","Direction","Filename","Branch Line"
-1,"Ida","linea_1_ida_hospital.kmz","Hospital Roballo / Toma Nueva por Thompson"
-1,"Vuelta","linea_1_vuelta_hospital.kmz","Hospital Roballo / Toma Nueva por Thompson"
-5,"Ida","linea_5_ida.kmz",
-5,"Vuelta","linea_5_vuelta.kmz",
-10,"Ida","linea_10_ida.kmz",
-10,"Vuelta","linea_10_vuelta.kmz",
-"11-21","Ida","linea_11_21_ida.kmz",
-"11-21","Vuelta","linea_11_21_vuelta.kmz",
-15,"Ida","linea_15_ida.kmz",
-15,"Vuelta","linea_15_vuelta.kmz",
+1,"Ida","linea_1_ida_hospital.kmz","Hospital Roballo - Toma Nueva por Thompson"
+1,"Vuelta","linea_1_vuelta_hospital.kmz","Hospital Roballo - Toma Nueva por Thompson"
+1,"Ida","linea_1_ida_casa_gobierno.kmz","Casa de Gobierno Directo por Churruarín"
+1,"Vuelta","linea_1_vuelta_casa_gobierno.kmz","Casa de Gobierno Directo por Churruarín"
+5,"Ida","linea_5_ida.kmz","Bajada Grande por Larramendi"
+5,"Vuelta","linea_5_vuelta.kmz","Bajada Grande por Larramendi"
+5,"Ida","linea_5_ida.kmz","Bajada Grande por Av. Estrada"
+5,"Vuelta","linea_5_vuelta.kmz","Bajada Grande por Av. Estrada"
+6,"Ida","Linea_6_ida.kmz","Facultades"
+6,"Vuelta","Linea_6_vuelta.kmz","Facultades por Paracao"
+10,"Ida","linea_10_ida.kmz","Toma Nueva"
+10,"Vuelta","linea_10_vuelta.kmz","Toma Nueva"
+10,"Ida","linea_10_ida.kmz","Toma Vieja"
+10,"Vuelta","linea_10_vuelta.kmz","Toma Vieja"
+"11-21","Ida","linea_11_21_ida.kmz",1
+"11-21","Vuelta","linea_11_21_vuelta.kmz",2
+15,"Ida","linea_15_ida.kmz",3
+15,"Vuelta","linea_15_vuelta.kmz",4

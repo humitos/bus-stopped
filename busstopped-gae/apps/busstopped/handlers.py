@@ -43,7 +43,8 @@ def request_context(context):
         'CLOCK': simplejson.dumps({
                 'year': now.year, 'month': now.month, 'day': now.day,
                 'hour': now.hour, 'minute': now.minute, 'second': now.second
-                })
+                }),
+        'BRANCH_LINES': simplejson.dumps(get_bus_branch_lines()),
         }
 
     context.update({
@@ -52,6 +53,16 @@ def request_context(context):
             'news': News.all().order('-date')[:5],
             })
     return context
+
+def get_bus_branch_lines():
+    response = {}
+    for bs in BusStop.all():
+        for line in bs.lines:
+            response[line] = []
+            for bl in bs.branch_lines:
+                if bl not in response[line]:
+                    response[line].append(bl)
+    return response
 
 
 class MainPage(RequestHandler):
@@ -70,11 +81,11 @@ class MainPage(RequestHandler):
 
 
 class AjaxGetBusStopped(RequestHandler):
-    def get(self, line=None, direction=None, branch_lines=None, **kwargs):
+    def get(self, line=None, direction=None, branch_line=None, **kwargs):
         bus_stops = BusStop.all()
         bus_stops.filter('lines =', line)
         bus_stops.filter('directions =', direction)
-        bus_stops.filter('branch_lines =', branch_lines)
+        bus_stops.filter('branch_lines =', branch_line)
 
         ds = BusDirection.all()
         ds.filter('bus_line =', line)
@@ -167,30 +178,17 @@ class AjaxGetBusPath(RequestHandler):
         lines = form.lines.choices
         response = {}
         for l in lines:
-            response[l[0]] = {}
+            response[l[0]] = {'Ida': {}, 'Vuelta': {}}
 
-        print response
         bus_paths = BusPath.all()
         for bp in bus_paths:
-            for bl in bp.branch_lines:
-                response[bp.bus_line][bp.direction][bl] = {
-                    'bus_line': bp.bus_line,
-                    'filename': bp.filename,
-                    'url': settings.MEDIA_URL + 'kml/' + bp.filename,
-                    'direction': bp.direction,
-                    }
+            response[bp.bus_line][bp.direction][bp.branch_line] = {
+                'bus_line': bp.bus_line,
+                'filename': bp.filename,
+                'url': settings.MEDIA_URL + 'kml/' + bp.filename,
+                'direction': bp.direction,
+                }
         return render_json_response(response)
-
-
-class AjaxGetBusBranchLines(RequestHandler):
-    def get(self, line=None):
-        bus_paths = BusPath.all()
-        #bus_paths.filter('bus_line =', line)
-        response = set()
-        for bp in bus_paths:
-            for bl in bp.branch_lines:
-                response.add(bl)
-        return render_json_response(list(response))
 
 
 class FAQPage(RequestHandler):
