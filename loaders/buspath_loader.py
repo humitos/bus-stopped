@@ -27,7 +27,4 @@ class BusPathLoader(bulkloader.Loader):
                 ('filename', get_string),
                 ])
 
-    def generate_key(self, i, values):
-        return values[0]
-
 loaders = [BusPathLoader]
