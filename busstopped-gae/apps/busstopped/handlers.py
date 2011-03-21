@@ -9,6 +9,7 @@
     :license: BSD, see LICENSE for more details.
 """
 
+import pytz
 import datetime
 
 # We MUST import this file (filters.py) because it's required by LOADERS
@@ -16,7 +17,7 @@ import filters
 import settings
 import utils
 
-from models import BusStop, News, BusTime, BusDirection, BusPath
+from models import BusStop, News, BusDirection, BusPath
 from forms import ViewBusStopLinesForm
 from dateutil.relativedelta import relativedelta
 
@@ -27,16 +28,22 @@ from google.appengine.ext import db
 from tipfy import RequestHandler, render_json_response, cached_property
 from tipfy.ext.jinja2 import render_response
 
+from django.utils import simplejson
 
 def request_context(context):
     def js_string(value):
         return '\'' + value + '\''
 
+    now = datetime.datetime.now(pytz.timezone('America/Argentina/Buenos_Aires'))
     # TODO: convert this to a JSON file
     js_settings = {
         'MEDIA_URL': js_string(settings.MEDIA_URL),
         'INITIAL_LOCATION': settings.INITIAL_LOCATION,
         'WEEKDAY': js_string(utils.get_weekday_display()),
+        'CLOCK': simplejson.dumps({
+                'year': now.year, 'month': now.month, 'day': now.day,
+                'hour': now.hour, 'minute': now.minute, 'second': now.second
+                })
         }
 
     context.update({
@@ -122,13 +129,23 @@ class AjaxGetBusStopTimes(RequestHandler):
             (bus_stop.name, bus_stop.address, utils.get_weekday_display(), bus_direction.to_direction, bus_direction.direction)
         for bus_time in bus_times:
             left_time = relativedelta(bus_time.time_1970(), utils.now_time()).minutes
+            bus_already_gone = False
             if left_time < 0:
-                # Time over 00hs
-                next_day = bus_time.time_1970() + datetime.timedelta(days=1)
-                left_time = relativedelta(next_day, utils.now_time()).minutes
+                if bus_time.time_1970().hour == 0:
+                    # Time over 00hs
+                    next_day = bus_time.time_1970() + datetime.timedelta(days=1)
+                    left_time = relativedelta(next_day, utils.now_time()).minutes
+                else:
+                    # This bus has already gone by
+                    bus_already_gone = True
             time = bus_time.time.strftime('%H:%M')
 
-            info_content += '<br /><b>%s min:</b><span> %s hs</span>' % (left_time, time)
+            time_content = '<br /><b>%s min:</b><span> %s hs</span>' % (left_time, time)
+
+            if bus_already_gone:
+                info_content += '<span style="color: red">' + time_content + '</span>'
+            else:
+                info_content += time_content
 
             if bus_time.comments:
                 info_content += '<em> ('
@@ -200,4 +217,13 @@ class InfoPage(RequestHandler):
         context = request_context(context)
 
         return render_response('info.html', **context)
+
+class AddPointDocPage(RequestHandler):
+    def get(self, **kwargs):
+        context = {
+            }
+
+        context = request_context(context)
+
+        return render_response('add_point_doc.html', **context)
 

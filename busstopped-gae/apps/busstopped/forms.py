@@ -2,7 +2,7 @@
 
 from wtforms import Form, fields
 
-from models import BusStop, BusTime
+from models import BusStop
 
 class ViewBusStopLinesForm(Form):
     lines = fields.SelectField(u'Líneas')

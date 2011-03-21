@@ -15,7 +15,9 @@ $(document).ready(function(){
 		      // arrays to save the items
 		      markers = [];
 		      layers = [];
+		      card_sell_point = false;
 		      last_info_window = new google.maps.InfoWindow();
+		      line_selected = '1'; // default
                   });
 
 function loadBusStop(line, direction) {
@@ -79,7 +81,7 @@ function loadBusStop(line, direction) {
 
 function initialize() {
 
-    loadBusEvent();
+    // loadBusEvent();
     // map.fitBounds(bounds);
 
 }
@@ -224,4 +226,18 @@ function KmlLayer(){
                                              {preserveViewport: true, suppressInfoWindows:true});
     kml_layer.setMap(map);
     layers.push(kml_layer);
+}
+
+function showCardSellPoints(){
+    var url = "http://maps.google.com/maps/ms?ie=UTF8&hl=es&msa=0&output=nl&msid=209325565596520548771.00049ea24c20104560d12";
+    var timestamp = new Date().getTime();
+    url += "&_=" + timestamp; // so Google doesn't cache our points
+    card_sell_point = new google.maps.KmlLayer(url, {preserveViewport: true});
+    card_sell_point.setMap(map);
+}
+
+function hideCardSellPoints(){
+    if(card_sell_point){
+	card_sell_point.setMap(null);
+    }
 }
