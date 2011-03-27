@@ -8,9 +8,15 @@
 
     <!-- <script src="/static/js/detect-location.js" type="text/javascript"></script> -->
     <script src="/static/js/google-maps.js" type="text/javascript"></script>
+    <script src="/static/js/clock.js" type="text/javascript"></script>
     <script type="text/javascript">
-function loadBusEvent(){
-    var line = $("select[id=lines] option:selected").val();
+function loadBusEvent(line){
+    if(line == undefined){
+        line = line_selected;
+    }
+    else{
+        line_selected = line;
+    }
     var direction = $("select[id=direction] option:selected").val();
     // Commented by Issue #28 - https://github.com/humitos/bus-stopped/issues#issue/28
     // var show_path = $("input[id=show-path]").attr('checked', false);
@@ -22,9 +28,8 @@ function showPathEvent(){
     var show_path = $("input[id=show-path]").attr("checked");
     hidePaths();
     if(show_path){
-        var line = $("select[id=lines] option:selected").val();
         var direction = $("select[id=direction] option:selected").val();
-        showPath(line, direction);
+        showPath(line_selected, direction);
     }
 }
 
@@ -40,9 +45,12 @@ function showCardSellPointsEvent(){
 }
 
 $(document).ready(function(){
-    $("select[name='direction']").change(loadBusEvent);
-    $("select[name='lines']").change(loadBusEvent);
+    $("select[name='direction']").change(function(event){ loadBusEvent();});
 });
+    </script>
+    <script language="JavaScript" type="text/javascript">
+        now = new Date(CLOCK.year, CLOCK.month, CLOCK.day, CLOCK.hour, CLOCK.minute, CLOCK.second);
+        $(document).ready(function(){var t = setTimeout("clock_tick()", 1000);});
     </script>
 {% endblock%}
 
@@ -64,8 +72,15 @@ $(document).ready(function(){
 	    <!-- </select> -->
 	    <!-- <input name="submit" type="submit" value="Mostrar" onclick="javascript:KmlLayer()"></input> -->
 
+	    {% for line in form.lines.choices %}
+	    <a href="#">
+	      <img onclick="$('.line-icon').addClass('opacity');$(this).removeClass('opacity');loadBusEvent('{{ line.0 }}'); return false;"
+	           class="line-icon opacity" style="border: 0;" src="{{ MEDIA_URL }}img/gmarkers/icon_line_{{ line.0|slugify }}.png"
+	           title="{{ line.1 }}" alt="{{ line.1 }}" />
+	    </a>
+	    {% endfor %}
 	    <br />
-	    Paradas: {{ form.lines }} {{ form.direction }}
+	    Dirección: {{ form.direction }}
 	    <br />
 	    <input id="show-path" name="show-path" type="checkbox" onclick="javascript:showPathEvent()" />
 	    <label for="show-path">Mostrar recorrido</label>

@@ -143,6 +143,20 @@ def el_once_news():
         if match:
             send_mail(title, content, link, site='El Once.com', url=URL)
 
+def lawebdeparana_news():
+    URL = 'http://www.lawebdeparana.com/categoria/locales.html'
+
+    soup = BeautifulSoup(urllib2.urlopen(URL).read())
+    news = soup.findAll('div', attrs={'class': 'cuerpo_noticias_categoria_2'})
+
+    for n in news:
+        title = n.strong.text
+        content = n.find('span', attrs={'class': 'texto_12_negro'}).text
+        link = URL[:URL.index('categoria')] + n.a.get('href')
+        match = regex.match(content) or regex.match(title)
+        if match:
+            send_mail(title, content, link, site='La Web de Parana', url=URL)
+
 
 if __name__ == '__main__':
     la_victoria_news()
@@ -150,3 +164,4 @@ if __name__ == '__main__':
     diario_uno_entrerios_news()
     el_diario_news()
     el_once_news()
+    lawebdeparana_news()
