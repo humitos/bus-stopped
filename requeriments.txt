@@ -4,3 +4,4 @@ ipdb==0.3
 ipython==0.10.1
 nose==1.0.0
 wsgiref==0.1.2
+pytz==2011d
