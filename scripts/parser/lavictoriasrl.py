@@ -1,110 +1,54 @@
 # Parse Times from "lavictoriasrl.com.ar"
 
-import csv
 import urllib2
-import cStringIO
-import codecs
 
+from utils import UnicodeWriter
 from BeautifulSoup import BeautifulSoup
 
-class UnicodeWriter:
-    """
-    A CSV writer which will write rows to CSV file "f",
-    which is encoded in the given encoding.
-    """
+from config import LA_VICTORIA
 
-    def __init__(self, f, dialect=csv.excel, encoding="utf-8", **kwds):
-        # Redirect output to a queue
-        if isinstance(f, str):
-            self.file_name = f
-            self.file = open(f, 'w')
-        else:
-            self.file = f
-
-        self.queue = cStringIO.StringIO()
-        self.writer = csv.writer(self.queue, dialect=dialect, delimiter=',',**kwds)
-        self.stream = self.file
-        self.encoder = codecs.getincrementalencoder(encoding)()
-
-    def writerow(self, row):
-        self.writer.writerow([s.encode("utf-8") for s in row])
-        # Fetch UTF-8 output from the queue ...
-        data = self.queue.getvalue()
-        data = data.decode("utf-8")
-        # ... and reencode it into the target encoding
-        data = self.encoder.encode(data)
-        # write to the target stream
-        self.stream.write(data)
-        # empty queue
-        self.queue.truncate(0)
-
-    def writerows(self, rows):
-        for row in rows:
-            self.writerow(row)
-
-    def close(self):
-        self.file.close()
-
-URL = {
-    '1': {
-        'Habiles': 'http://usuarios.advance.com.ar/isti98/hor_linea_01h.htm',
-        'Sabados': 'http://usuarios.advance.com.ar/isti98/hor_linea_01s.htm',
-        'Domingos': 'http://usuarios.advance.com.ar/isti98/hor_linea_01d.htm',
-        },
-    '5': {
-        'Habiles': 'http://usuarios.advance.com.ar/isti98/hor_linea_05h.htm',
-        'Sabados': 'http://usuarios.advance.com.ar/isti98/hor_linea_05s.htm',
-        'Domingos': 'http://usuarios.advance.com.ar/isti98/hor_linea_05d.htm',
-        },
-    '6': {
-        'Habiles': 'http://usuarios.advance.com.ar/isti98/hor_linea_06h.htm',
-        'Sabados': 'http://usuarios.advance.com.ar/isti98/hor_linea_06s.htm',
-        'Domingos': 'http://usuarios.advance.com.ar/isti98/hor_linea_06d.htm',
-        },
-    '10': {
-        'Habiles': 'http://usuarios.advance.com.ar/isti98/hor_linea_10h.htm',
-        'Sabados': 'http://usuarios.advance.com.ar/isti98/hor_linea_10s.htm',
-        'Domingos': 'http://usuarios.advance.com.ar/isti98/hor_linea_10d.htm',
-        },
-    '11-21': {
-        'Habiles': 'http://usuarios.advance.com.ar/isti98/hor_linea_11h.htm',
-        'Sabados': 'http://usuarios.advance.com.ar/isti98/hor_linea_11s.htm',
-        'Domingos': 'http://usuarios.advance.com.ar/isti98/hor_linea_11d.htm',
-        },
-    '15': {
-        'Habiles': 'http://usuarios.advance.com.ar/isti98/hor_linea_15h.htm',
-        'Sabados': 'http://usuarios.advance.com.ar/isti98/hor_linea_15s.htm',
-        'Domingos': 'http://usuarios.advance.com.ar/isti98/hor_linea_15d.htm',
-        },
-    '22': {
-        'Habiles': 'http://usuarios.advance.com.ar/isti98/hor_linea_22h.htm',
-        'Sabados': 'http://usuarios.advance.com.ar/isti98/hor_linea_22s.htm',
-        'Domingos': 'http://usuarios.advance.com.ar/isti98/hor_linea_22d.htm',
-        },
-    '22 Bis': {
-        'Habiles': 'http://usuarios.advance.com.ar/isti98/hor_linea_22bish.htm',
-        }
-    }
-
-def download_times(line, day, url):
+def download_times(line, day, url, config):
     r = urllib2.urlopen(url).read()
     soup = BeautifulSoup(r)
     table = soup.find('table')
 
-    filename = 'lavictoriasrl/line_%s_%s.csv' % (line.lower(), day.lower())
+    filename_ida = 'lavictoriasrl/line_%s_%s_ida.csv' % (line.lower(), day.lower())
+    filename_vuelta = 'lavictoriasrl/line_%s_%s_vuelta.csv' % (line.lower(), day.lower())
 
-    csv_writer = UnicodeWriter(open(filename, 'w'))
-    for tr in table.findAll('tr')[5:-2]:
-        row = []
-        for td in tr.findAll('td')[:-1]:
-            text = td.text
+    csv_writer_ida = UnicodeWriter(open(filename_ida, 'w'))
+    csv_writer_vuelta = UnicodeWriter(open(filename_vuelta, 'w'))
+
+    csv_writer_ida.writerow([n for n, i in config['row_titles']['ida']])
+    csv_writer_ida.writerow([i for n, i in config['row_titles']['ida']])
+    csv_writer_vuelta.writerow([n for n, i in config['row_titles']['vuelta']])
+    csv_writer_vuelta.writerow([i for n, i in config['row_titles']['vuelta']])
+
+    for tr in table.findAll('tr')[config['exclude_start_rows']:-config['exclude_end_rows']]:
+        row_ida = []
+        row_vuelta = []
+        all_times = tr.findAll('td')[:-1]
+        for ida, vuelta in zip(all_times[:config['nro_cols_ida']],
+                               all_times[config['nro_cols_ida']:]):
+            text_ida = ida.text
+            text_vuelta = vuelta.text
             for r in ('&nbsp;', ):
-                text = text.replace(r, '')
-            row.append(text)
-        csv_writer.writerow(row)
-    csv_writer.close()
+                text_ida = text_ida.replace(r, '')
+                text_vuelta = text_vuelta.replace(r, '')
+            row_ida.append(text_ida)
+            row_vuelta.append(text_vuelta)
+        if not config['has_comments']:
+            row_ida.append('')
+            row_vuelta.append('')
+        csv_writer_ida.writerow(row_ida)
+        csv_writer_vuelta.writerow(row_vuelta)
+    csv_writer_ida.close()
+    csv_writer_vuelta.close()
 
-for line, days in URL.iteritems():
-    for day, url in days.iteritems():
-        print line, day, url
-        download_times(line, day, url)
+for line, days in LA_VICTORIA.iteritems():
+    for key, value in days.iteritems():
+        if line != '1':
+            continue
+        if key == 'config':
+            continue
+        print line, key, value
+        download_times(line, key, value, days['config'])
