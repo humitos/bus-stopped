@@ -126,3 +126,14 @@ class ExternalNews(db.Model):
 
     def __repr__(self):
         return '(%s) %s' % (self.site, self.date)
+
+
+class Holiday(db.Model):
+    description = db.StringProperty()
+    lines = db.StringListProperty()
+    date = db.DateProperty()
+    time_days = db.StringProperty(choices=set(['Habiles',
+      'Sabados', 'Domingos']))
+
+    def __repr__(self):
+        return '(%s) %s' % (self.date, self.time_days)
